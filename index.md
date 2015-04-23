@@ -26,11 +26,12 @@ In June 2014 I started the process of changing my career and exploring the world
 * In 2015, I finally had enough money and nerve to quit the admin work that made me miserable for far too many years. The joy I feel is like that of an animal who has  been released from a painfully small cage.
 
 * Any cage is too small.
-  <div class="icons">
+
+<div class="icons">
     <a href="http://twitter.com/TreeCasiano"><i class="fa fa-twitter fa-2x"></i></a>
     <a href="https://github.com/TreeCasiano"><i class="fa fa-github fa-2x"></i></a>
     <a href="https://www.linkedin.com/in/treecasiano"><i class="fa fa-linkedin fa-2x"></i></a>
-  </div>
+</div>
 
 <br />
 
