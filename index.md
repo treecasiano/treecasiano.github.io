@@ -19,7 +19,7 @@ In June 2014 I started the process of changing my career and exploring the world
 
 * I'm passionate about all things geospatial. I love maps and cartography and GIS and could spend hours with Google Earth. I started a certificate in Geographic Information Systems. I wish I had time to finish it.
 
-* I have recently become obsessed with everything about Turkey, particularly Anatolian Rock (Barış Manço!), Cappadocia, and Istanbul. I usually have my keyboard set to Turkish because I need to type ı and ş and ç often.
+* I recently have become obsessed with everything about Turkey, particularly Anatolian Rock (Barış Manço!), Cappadocia, and Istanbul. I usually have my keyboard set to Turkish because I need to type ı and ş and ç often.
 
 * I like animals far better than people. I believe that if you don't have a heart for animals, you don't have a heart at all.
 
@@ -31,6 +31,7 @@ In June 2014 I started the process of changing my career and exploring the world
     <a href="http://twitter.com/TreeCasiano"><i class="fa fa-twitter fa-2x"></i></a>
     <a href="https://github.com/TreeCasiano"><i class="fa fa-github fa-2x"></i></a>
     <a href="https://www.linkedin.com/in/treecasiano"><i class="fa fa-linkedin fa-2x"></i></a>
+    <a href="http://keyoftree.com"><i class="fa fa-music fa-2x"></i></a>
 </div>
 
 <br />
@@ -49,6 +50,7 @@ In June 2014 I started the process of changing my career and exploring the world
 
 <ul>
   <li><a href="http://www.meetup.com/PyLadies-PDX/">PyLadies PDX</a></li>
+  <li><a href="http://www.meetup.com/Women-Who-Code-Portland/">Women Who Code Portland</a></li>
 </ul>
 
 <br />
