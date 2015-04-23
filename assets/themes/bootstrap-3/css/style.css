@@ -32,12 +32,18 @@ a:hover {
 
 .icons i {
   display: inline-block;
-  padding-left: 15px;
+  padding: 15px;
 }
 
 .icons {
-  text-align: right;
+  text-align: center;
 }
+
+#last_updated {
+  text-align: center;
+  font-size: 75%;
+}
+
 
 /* posts index */
 .post > h3.title {
@@ -56,7 +62,8 @@ a:hover {
 /* post-full*/
 .post-full .date {
   margin-bottom: 20px;
-  font-weight: bold; }
+  font-weight: bold;
+  color: #950096;}
 
 /* tag_box */
 .tag_box {
@@ -77,17 +84,17 @@ a:hover {
   padding: 3px 6px;
   margin: 2px;
   background: #eee;
-  color: #555;
-  border-radius: 3px;
+  color: #f76235;
+  border-radius: 10px;
   text-decoration: none;
-  border: 1px dashed #cccccc; }
+  border: 2px dotted #950096; }
 
 .tag_box a span {
   vertical-align: super;
   font-size: 0.8em; }
 
 .tag_box a:hover {
-  background-color: #e5e5e5; }
+  background-color: #950096; }
 
 .tag_box a.active {
   background: #57A957;
