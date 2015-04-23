@@ -57,5 +57,5 @@ In June 2014 I started the process of changing my career and exploring the world
 
 <br />
 
-<p>Site last updated: {{ site.time | date_to_string }}</p>
+<p id="last_updated">Site last updated: {{ site.time | date_to_string }}</p>
 
