@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Level Up!
+title: Leveling Up!
 tagline: From code noob to dev pro in 347 easy steps.
 ---
 {% include JB/setup %}
