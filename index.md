@@ -13,19 +13,19 @@ In June 2014 I started the process of changing my career and exploring the world
 
 #### About Me
 
-* I love languages. I studied French for five years in my teens and am kicking myself for not majoring in Linguistics (and Computer Science). I am currently learning Turkish and Italian and know a little German and Dutch. I wish I didn't need sleep so I could study Welsh, Estonian, and Basque (and learn the cello!). If I were rich and could do wildly impractical things, I would get my PhD in historical linguistics. For fun.
+* I love languages. I studied French for five years in my teens and am kicking myself for not majoring in Linguistics (and Computer Science) instead of Psychology. I am currently learning Turkish and Italian and know a little German and Dutch. I wish I didn't need sleep so I could study Welsh, Estonian, and Basque (and learn the cello!). If I were rich and could do wildly impractical things, I would get my PhD in historical linguistics. For fun.
 
 * I used to teach piano for a living and miss it every day. I am learning classical guitar and bluegrass mandolin. I like to draw, but I'm not good at it. Yet.
 
 * I'm passionate about all things geospatial. I love maps and cartography and GIS and could spend hours with Google Earth. I started a certificate in Geographic Information Systems. I wish I had time to finish it.
 
-* I recently have become obsessed with everything about Turkey, particularly Anatolian Rock (Barış Manço!), Cappadocia, and Istanbul. I usually have my keyboard set to Turkish because I need to type ı and ş and ç often.
+* I recently became obsessed with everything about Turkey, particularly Anatolian Rock (Barış Manço!), Cappadocia, and Istanbul. I usually have my keyboard set to Turkish because I need to type ı and ş and ç often.
 
 * I like animals far better than people. I believe that if you don't have a heart for animals, you don't have a heart at all.
 
-* In 2015, I finally had enough money and nerve to quit the admin work that made me miserable for far too many years. The joy I feel is like that of an animal who has  been released from a painfully small cage.
+* In 2015, I finally had enough money and nerve to quit the admin work that made me miserable for far too many years. The joy I feel is like that of an animal who has been released from a painfully small cage.
 
-* Any cage is too small.
+* All cages are too small.
 
 <div class="icons">
     <a href="http://twitter.com/TreeCasiano"><i class="fa fa-twitter fa-2x"></i></a>
@@ -51,6 +51,8 @@ In June 2014 I started the process of changing my career and exploring the world
 <ul>
   <li><a href="http://www.meetup.com/PyLadies-PDX/">PyLadies PDX</a></li>
   <li><a href="http://www.meetup.com/Women-Who-Code-Portland/">Women Who Code Portland</a></li>
+  <li><a href="http://chicktech.org">ChickTech</a></li>
+  <li><a href="http://http://siliconflorist.com">The Silicon Florist</a></li>
 </ul>
 
 <br />
