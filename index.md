@@ -26,3 +26,7 @@ In June 2014 I started the process of changing my career and exploring the world
 </ul>
 
 
+
+<a href="http://twitter.com/TreeCasiano"><i class="fa fa-twitter fa-3x"></i></a>
+
+<a href="https://github.com/TreeCasiano"><i class="fa fa-github fa-3x"></i></a>
