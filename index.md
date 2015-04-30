@@ -54,7 +54,7 @@ In June 2014 I started the process of changing my career and exploring the world
   <li><a href="http://www.meetup.com/PyLadies-PDX/">PyLadies PDX</a></li>
   <li><a href="http://www.meetup.com/Women-Who-Code-Portland/">Women Who Code Portland</a></li>
   <li><a href="http://chicktech.org">ChickTech</a></li>
-  <li><a href="http://http://siliconflorist.com">The Silicon Florist</a></li>
+  <li><a href="http://siliconflorist.com">The Silicon Florist</a></li>
 </ul>
 
 <br />
