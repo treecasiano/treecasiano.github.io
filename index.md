@@ -5,13 +5,15 @@ tagline: From code noob to dev pro in 347 easy steps.
 ---
 {% include JB/setup %}
 
-#### My name is Tree Casiano. Welcome to my humble blog-abode.
+#### Welcome to my humble blog-abode.
 
 In June 2014 I started the process of changing my career and exploring the world of web development. I was quickly addicted to code and happy to meet so many welcoming people and organizations in Portland, Oregon. Here I will write about my journey and share all the resources that have helped me along the way.
 
 <br />
 
 #### About Me
+
+* My name is Tree. My birth name is Theresa, but if you say it quickly, it sounds like Tree-sa, hence the nickname. My parents have been calling me Tree my whole life.
 
 * I love languages. I studied French for five years in my teens and am kicking myself for not majoring in Linguistics (and Computer Science) instead of Psychology. I am currently learning Turkish and Italian and know a little German and Dutch. I wish I didn't need sleep so I could study Welsh, Estonian, and Basque (and learn the cello!). If I were rich and could do wildly impractical things, I would get my PhD in historical linguistics. For fun.
 
