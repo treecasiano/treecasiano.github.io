@@ -13,9 +13,14 @@
 /*.navbar .nav {
   float: right; }*/
 
+* {
+  font-family: 'Titillium Web', sans-serif;
+}
+
 /* Jekyll Bootstrap Colors */
 h1, h2, h3, h4, h5, h6 {
   color: #f76235;
+  font-family: 'Titillium Web', sans-serif;
 }
 #footer {
   background-color: #f76235;
@@ -81,13 +86,13 @@ a:hover {
   float: left; }
 
 .tag_box a {
-  padding: 3px 6px;
+  padding: 2px 3px;
   margin: 2px;
   background: #eee;
   color: #f76235;
   border-radius: 10px;
   text-decoration: none;
-  border: 2px dotted #950096; }
+  border: 1px dotted #950096; }
 
 .tag_box a span {
   vertical-align: super;
