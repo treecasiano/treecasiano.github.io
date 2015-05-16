@@ -3,7 +3,7 @@ layout: post
 title: "Code Fellows Week Two"
 description: ""
 category: code school
-tags: [JavaScript, Code Fellows, Node.js]
+tags: [JavaScript, Code Fellows]
 ---
 {% include JB/setup %}
 
