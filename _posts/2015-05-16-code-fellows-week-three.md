@@ -13,11 +13,13 @@ Code Fellows continues to be a great investment of my time and energy. The labs 
 
 In related news, WorkSource Oregon approved my ProSTEP funding for PDX Code Guild. There is much rejoicing in the Casiano household these days! I intend to keep leveling up my JavaScript and Node.js skills during the Code Guild Python/Django training. I enjoy working with Node.js, and having skills in more than one tech stack can only help me when I hit the job market in the fall. I have no other commitments in my life besides my career training, so I’m not too worried about spreading myself too thin.
 
-I'll close this post with telling you about a fun little Node.js package called [Normit](https://github.com/pawurb/normit) that allows you to access Google Translate via the command line. I am doing a lot of Turkish and Italian song translation, so I expect I will use this package often. It is much easier to pull up a translation via the command line than by navigating to Google Translate.
+I'll close this post by telling you about a fun little Node.js package called [Normit](https://github.com/pawurb/normit) that allows you to access Google Translate via the command line. I am doing a lot of Turkish and Italian song translation, so I expect I will use this package often. It is much easier to pull up a translation via the command line than by navigating to Google Translate.
 
 Here's an example of what it looks like:
 
-~ $ normit en tr "I speak Turkish."
+$ normit en tr "I speak Turkish."
+
 => Ben Türkçe konuşurlar.
+
 
 So cool!
