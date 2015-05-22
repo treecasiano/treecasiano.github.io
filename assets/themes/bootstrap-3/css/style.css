@@ -18,7 +18,7 @@
 }
 
 body {
-  background: #3AC7DD;
+  background: #377E8F;
   color: white;
 }
 
@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #footer {
-  background-color: #3AC7dd;
+  background-color: #377E8F;
 }
 
 
@@ -40,7 +40,7 @@ a {
   text-decoration: none;
 }
   a:hover, a:focus {
-  color: #FF8000;
+  color: #10243E;
 }
 
 .icons i {
@@ -97,7 +97,7 @@ a {
   padding: 5px 10px;
   margin: 5px;
   background: white;
-  color: #f76235;
+  color: #377E8F;
   border-radius: 15px;
   text-decoration: none;
    }
