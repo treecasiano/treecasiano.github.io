@@ -7,7 +7,7 @@ tags: [Node.js, Express.js, Code Fellows, JavaScript]
 ---
 {% include JB/setup %}
 
-My Code Fellows JavaScript class assignment is now over and the final assignment has been submitted and graded. We covered a lot of ground in a short period of time. In the last week we continued to work with Express.js and learned how to deploy apps to Heroku.
+My month-long Code Fellows JavaScript class is now over and the final assignment has been submitted and graded. We covered a lot of ground in a short period of time. In the last week we continued to work with Express.js and learned how to deploy apps to Heroku.
 
 For the final assignment, we created a Pig Latin translator. It was trickier than I thought it would be. We had to account for punctuation, capitalization, words that began with two or three consonants, and figure out how to wire it all together with Express. I got a lot of practice with array methods, which I needed.
 
