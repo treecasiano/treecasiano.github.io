@@ -16,4 +16,4 @@ After I got everything up and running, I learned that there's a version of Jekyl
 
 All this happy Jekyll action has distracted me from the pre-work I'm supposed to be doing for an 8 hour Code Fellows Git & Unix workshop I'll be attending the day after tomorrow. If I'm inspired, I'll do a review of the training on this site. This workshop is a pre-requisite for the month-long Code Fellows JavaScript Foundations II course.
 
-Next week I should know more about my grant funding for PDX Code Guild Python-based bootcamp, which I will start shortly after my Code Fellows training ends. I'm looking at four solid months of dev training and I coudln't be happier.
+Next week I should know more about my grant funding for PDX Code Guild Python-based bootcamp, which I will start shortly after my Code Fellows training ends. I'm looking at four solid months of dev training and I could not be happier.
