@@ -2,6 +2,7 @@
 layout: page
 title: "About"
 description: ""
+group: navigation
 ---
 {% include JB/setup %}
 
@@ -17,11 +18,6 @@ description: ""
 * I recently became obsessed with everything about Turkey, particularly Anatolian Rock (Barış Manço!), Cappadocia, and Istanbul. I usually have my keyboard set to Turkish because I need to type ı and ş and ç often.
 
 * I like animals far better than people. I believe that if you don't have a heart for animals, you don't have a heart at all.
-
-* In 2015, I finally had enough money and nerve to quit the admin work that made me miserable for far too many years. The joy I feel is like that of an animal who has been released from a painfully small cage.
-
-* All cages are too small.
-
 
 <br />
 
