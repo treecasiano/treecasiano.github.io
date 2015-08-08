@@ -1,19 +1,15 @@
 ---
 layout: page
 title: Leveling Up!
-tagline: From code noob to dev pro in 347 easy steps.
+tagline: from code noob to dev pro in 347 easy steps
 ---
 {% include JB/setup %}
 
-#### My name is Tree Casiano. Welcome to my humble blog-abode.
+#### My name is Tree Casiano, and I am a web developer.
 
-In June 2014 I started the process of changing my career and exploring the world of web development. I was quickly addicted to code and happy to meet so many welcoming people and organizations in Portland, Oregon. Here I will write about my journey and share all the resources that have helped me along the way.
+I am addicted to code. And guitars. There is no cure.
 
-Thanks for reading!
-
-~<a href = "http://treecasiano.github.io/pages/about.html">Tree</a>
-
-<br />
+<hr>
 
 #### Blog Posts
 
@@ -32,7 +28,6 @@ Thanks for reading!
   <li><a href="http://www.meetup.com/Women-Who-Code-Portland/">Women Who Code Portland</a></li>
   <li><a href="http://chicktech.org">ChickTech</a></li>
   <li><a href="http://siliconflorist.com">The Silicon Florist</a></li>
-  <li><a href="http://pdxcodeguild.com">PDX Code Guild</a></li>
 </ul>
 
 <br />
