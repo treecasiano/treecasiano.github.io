@@ -124,6 +124,8 @@ a {
 
 .excerpt {
     font-style: italic;
+    padding-left: 25px;
+    padding-bottom: 25px;
 }
 
 ul {
