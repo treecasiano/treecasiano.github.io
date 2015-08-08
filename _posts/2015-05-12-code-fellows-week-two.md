@@ -4,6 +4,7 @@ title: "Code Fellows Week Two"
 description: ""
 category: code school
 tags: [JavaScript, Code Fellows]
+excerpt: We're already halfway through the third week of my Code Fellows JavaScript course. The material has kept me so busy that I barely have time to write. That's not a complaint, though. I'm having a great time...
 ---
 {% include JB/setup %}
 

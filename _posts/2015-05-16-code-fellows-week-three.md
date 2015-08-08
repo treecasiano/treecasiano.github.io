@@ -4,6 +4,7 @@ title: "Code Fellows Week Three"
 description: ""
 category: code school
 tags: [JavaScript, Code Fellows, Node.js]
+excerpt: This week in my Code Fellows JavaScript Foundations II course we focused on interacting with the DOM using both vanilla JavaScript and jQuery...
 ---
 {% include JB/setup %}
 

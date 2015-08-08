@@ -4,6 +4,7 @@ title: "Code Fellows Week Four"
 description: ""
 category: code school
 tags: [Node.js, Express.js, Code Fellows, JavaScript]
+excerpt: My month long Code Fellows JavaScript class is now over...
 ---
 {% include JB/setup %}
 
