@@ -18,7 +18,8 @@
 }
 
 body {
-  background: #377E8F;
+  /*background: #377E8F;*/
+  background: #00a4a7;
   color: white;
 }
 
@@ -29,14 +30,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #footer {
-  background-color: #377E8F;
+  background-color: #00a4a7;
 }
 
-
+h1 small {
+  color: white;
+  font-size: 16px;
+  font-style: italic;
+  display: block;
+  margin-top: 10px;
+}
 
 a {
   color: #FFCC66;
-  transition: all 0.75s linear;
+  transition: all 0.5s linear;
   text-decoration: none;
 }
   a:hover, a:focus {
