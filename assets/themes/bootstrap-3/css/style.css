@@ -64,7 +64,10 @@ a {
   font-size: 75%;
 }
 
-
+.treecasiano {
+  font-size: 25px;
+  letter-spacing: 8px;
+}
 /* posts index */
 .post > h3.title {
   position: relative;
