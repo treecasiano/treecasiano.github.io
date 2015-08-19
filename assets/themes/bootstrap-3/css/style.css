@@ -48,6 +48,7 @@ a {
 }
   a:hover, a:focus {
   color: #10243E;
+    text-decoration: none;
 }
 
 .icons i {
