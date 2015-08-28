@@ -29,6 +29,8 @@ I am addicted to code. And guitars. There is no cure.
   <li><a href="http://www.meetup.com/Women-Who-Code-Portland/">Women Who Code Portland</a></li>
   <li><a href="http://chicktech.org">ChickTech</a></li>
   <li><a href="http://siliconflorist.com">The Silicon Florist</a></li>
+  <li><a href="http://codefellows.org">Code Fellows</a></li>
+  <li><a href="http://teamtreehouse.com">Treehouse</a></li>
 </ul>
 
 <br />
