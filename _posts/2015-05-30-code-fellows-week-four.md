@@ -16,6 +16,4 @@ We also had to create a second translator. I chose [Alfabeto Farfallino](http://
 
 My [JavaScript Translation Services application](http://murmuring-escarpment-1797.herokuapp.com/) is now deployed to Heroku. It's not a particularly useful application, but it was fantastic practice and seems worthy of inclusion in my developer portfolio. After I refactor the JavaScript in my [Rock, Paper, Scissors, Lizard, Spock app](http://treecasiano.com/rpsls-js/index.html), I'll have two intermediate level projects to feature on my website. Progress is slow on this front, but steady.
 
-The Code Fellows class was a good use of my time this past month. I have nothing but good things to say about my Code Fellows experience. I leveled up much more quickly than I could have on my own, perhaps by an order of magnitude. Although I start a full stack Python bootcamp next month, I intend to keep working on my Node.js skills during that time. I’m smitten.
-
-The next steps for me will be to conduct deep dives into front end CSS and JavaScript frameworks, learn more about build tools, and start putting together some higher level projects for my portfolio. All of this will be part of the bootcamp. I can’t wait.
+The Code Fellows class was a good use of my time this past month. I have nothing but good things to say about my Code Fellows experience. I leveled up much more quickly than I could have on my own, perhaps by an order of magnitude.
