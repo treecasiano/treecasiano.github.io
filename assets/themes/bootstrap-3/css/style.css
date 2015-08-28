@@ -18,23 +18,22 @@
 }
 
 body {
-  /*background: #377E8F;*/
-  background: #00a4a7;
-  color: white;
+  background: white;
+  color: black;
 }
 
 /* Jekyll Bootstrap Colors */
 h1, h2, h3, h4, h5, h6 {
-  color: white;
+  color: darkturquoise;
   font-family: 'Titillium Web', sans-serif;
 }
 
 #footer {
-  background-color: #00a4a7;
+  background-color: white;
 }
 
 h1 small {
-  color: white;
+  color: black;
   font-size: 16px;
   font-style: italic;
   display: block;
@@ -42,12 +41,12 @@ h1 small {
 }
 
 a {
-  color: #FFCC66;
-  transition: all 1s linear;
+  color: orangered;
+  transition: all .5s linear;
   text-decoration: none;
 }
   a:hover, a:focus {
-  color: #10243E;
+  color: darkturquoise;
     text-decoration: none;
 }
 
@@ -87,7 +86,7 @@ a {
 .post-full .date {
   margin-bottom: 20px;
   font-weight: bold;
-  color: #FFCC66;}
+  color: darkorange;}
 
 /* tag_box */
 .tag_box {
@@ -107,8 +106,8 @@ a {
 .tag_box a {
   padding: 5px 10px;
   margin: 5px;
-  background: white;
-  color: #377E8F;
+  background: darkturquoise;
+  color: white;
   border-radius: 15px;
   text-decoration: none;
    }
@@ -118,12 +117,12 @@ a {
   font-size: 0.8em; }
 
 .tag_box a:hover {
-  background-color: #FFCC66;
+  background-color: darkorange;
   color: white; }
 
 .tag_box a.active {
-  background: #57A957;
-  border: 1px solid #4c964d;
+  background: darkblue;
+  border: 1px solid black;
   color: #FFF; }
 
 .excerpt {
