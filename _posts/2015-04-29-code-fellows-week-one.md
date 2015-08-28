@@ -4,7 +4,7 @@ title: "Code Fellows Week One"
 description: ""
 category: "code school"
 tags: [Code Fellows, JavaScript, Git, Fish]
-excerpt: This week I started a four-week course with Code Fellows called JavaScript Foundations II (JS F2)... 
+excerpt: This week I started a four-week course with Code Fellows called JavaScript Foundations II (JS F2)...
 ---
 {% include JB/setup %}
 
@@ -20,7 +20,7 @@ In the first evening of the JS F2 class, we blasted through a rapid refresher of
 
 This class is quite fast-paced. I expect it to remain so as it increases in difficulty. This is good. I'm not experiencing my usual academic impatience in this class, so I think I'm in the right place.
 
-In other news, in a few days I'll know if my grant funding for PDX Code Guild is approved. I'm in the final stages, and it looks like there won't be any problems. I was told my application is "impeccable." The grant should cover nearly 75% of the tuition, helping me to avoid training-related debt. I'll be thrilled and immensely grateful if this gets approved. I intend to be a poster child for WorkSource Oregon's workforce development efforts. Seriously, they may take my picture if I am wildly successful. I had to sign a release giving them permission to write about me. I will do everything I can to make sure the money they invested in me is well spent.
+In other news, in a few days I'll know if my grant funding for my summer bootcamp is approved. I'm in the final stages, and it looks like there won't be any problems. I was told my application is "impeccable." The grant should cover nearly 75% of the tuition, helping me avoid training-related debt. I'll be thrilled and immensely grateful if this gets approved. I intend to be a poster child for WorkSource Oregon's workforce development efforts. Seriously, they may take my picture if I am wildly successful. I had to sign a release giving them permission to write about me. I will do everything I can to make sure the money they invested in me is well spent.
 
 And on that note, I'm going to wrap up this post and spend a little time on my elliptical before I head downtown for a meeting with a fellow Code Oregon student before the second class. If only coding burned calories!
 
