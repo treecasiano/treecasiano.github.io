@@ -11,15 +11,17 @@ I am addicted to code. And guitars. There is no cure.
 
 <hr>
 
-#### Blog Posts
+#### Recent Blog Posts
 
 <ul class="posts">
-  {% for post in site.posts %}
+  {% for post in site.posts limit: 3 %}
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
     <div class="excerpt">{{ post.excerpt }}</div>
   {% endfor %}
 </ul>
-
+<i class="fa fa-book fa-1x"></i> [view archive](archive.html)
+<br />
+<br />
 <br />
 
 #### Portland Tech Community Resources
