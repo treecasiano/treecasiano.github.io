@@ -16,7 +16,7 @@ One of the coolest things I picked up from the workshop is the [Fish command lin
 
 The guide also showed us how to wire up Sublime Text properly so it can be opened from the command line as well as serve as the default editor for the command line. We were provided some code to install syntax highlighting for the command line and some configurations to make it a little easier to work with GitHub from the command line. My terminal is now both aesthetically pleasing and more user friendly.
 
-In the first evening of the JS F2 class, we blasted through a rapid refresher of JavaScript basics including variables, data types, scope, objects, functions, and console methods. Again, while this was a review, I found a few more dots connected for me just like in the workshop. Tonight we'll dig deeper into control structures and start working with Node. I installed Node a few months but haven't had time to do anything with it, so I'm excited to get started.
+In the first evening of the JS F2 class, we blasted through a rapid refresher of JavaScript basics including variables, data types, scope, objects, functions, and console methods. Again, while this was a review, I found a few more dots connected for me just like in the workshop. Tonight we'll dig deeper into control structures and start working with Node. I installed Node a few months ago but haven't had time to do anything with it, so I'm excited to get started.
 
 This class is quite fast-paced. I expect it to remain so as it increases in difficulty. This is good. I'm not experiencing my usual academic impatience in this class, so I think I'm in the right place.
 
