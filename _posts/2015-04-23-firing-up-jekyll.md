@@ -3,7 +3,7 @@ layout: post
 title: "Firing up Jekyll"
 description: ""
 category: GitHub
-tags: [Jekyll, code school]
+tags: [Jekyll, Code Fellows]
 excerpt: Since yesterday afternoon I have been obsessively making small tweaks to this new Jekyll site...
 ---
 {% include JB/setup %}
