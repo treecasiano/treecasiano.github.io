@@ -8,7 +8,7 @@ excerpt: This week in my Code Fellows JavaScript Foundations II course we focuse
 ---
 {% include JB/setup %}
 
-This week in my Code Fellows JavaScript Foundations II course we focused on interacting with the DOM using both vanilla JavaScript and jQuery. Working with the DOM without jQuery made it a lot easier to understand what exactly the jQuery library was doing for us. We ramped up the difficulty with building a server in Node.js using Express and learning to work with Ajax. I’m still not sure I have a good handle on all that we covered and will need a lot more practice.
+This week in my Code Fellows JavaScript Foundations II course we focused on interacting with the DOM using both vanilla JavaScript and jQuery. Working with the DOM without jQuery made it a lot easier to understand what exactly the jQuery library was doing for us. We ramped up the difficulty by building a server in Node.js using Express and implementing AJAX. I’m still not sure I have a good handle on all that we covered and will need a lot more practice.
 
 Code Fellows continues to be a great investment of my time and energy. The labs and quizzes are well written and reinforce my learning greatly. Now it’s just a matter of practice, practice, practice. Also, I think this class has converted me to a Node.js enthusiast.
 
