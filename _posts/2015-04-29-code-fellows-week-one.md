@@ -2,7 +2,7 @@
 layout: post
 title: "Code Fellows Week One"
 description: ""
-category: "code school"
+category: training
 tags: [Code Fellows, JavaScript, Git, Fish]
 excerpt: This week I started a four-week course with Code Fellows called JavaScript Foundations II (JS F2)...
 ---

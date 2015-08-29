@@ -2,7 +2,7 @@
 layout: post
 title: "Code Fellows Week Four"
 description: ""
-category: code school
+category: training
 tags: [Node.js, Express.js, Code Fellows, JavaScript]
 excerpt: My month long Code Fellows JavaScript class is now over...
 ---
