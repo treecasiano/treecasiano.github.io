@@ -29,6 +29,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Arapey', serif;
 }
 
+h2 {
+  font-size: 1.2em;
+}
+
 #footer {
   background-color: white;
   font-size: 16px;
@@ -111,7 +115,7 @@ a {
   margin: 5px;
   background: darkturquoise;
   color: white;
-  border-radius: 15px;
+  border-radius: 5px;
   text-decoration: none;
    }
 
