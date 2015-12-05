@@ -2,8 +2,8 @@
 layout: post
 title: "Another New Year"
 description: ""
-category: training
-tags: [birthday, career development, front-end fangirl]
+category: career development
+tags: [birthday, front-end fangirl]
 excerpt: Today is my birthday and a good day to reflect on how far I've come...
 ---
 {% include JB/setup %}
