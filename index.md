@@ -37,17 +37,3 @@ I am addicted to code. And guitars. There is no cure.
 
 <br />
 
-<div class="icons">
-    <a href="http://twitter.com/TreeCasiano"><i class="fa fa-twitter fa-2x"></i></a>
-    <a href="https://github.com/TreeCasiano"><i class="fa fa-github fa-2x"></i></a>
-    <a href="https://www.linkedin.com/in/treecasiano"><i class="fa fa-linkedin fa-2x"></i></a>
-    <a href="http://keyoftree.com"><i class="fa fa-music fa-2x"></i></a>
-    <br>
-    <a href="http://treecasiano.com" class="treecasiano">treecasiano.com</a>
-
-</div>
-
-<br />
-
-<p id="last_updated">Site last updated: {{ site.time | date_to_string }}</p>
-
