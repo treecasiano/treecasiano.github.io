@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Full Stack JavaScript Resources" description:
-"A curated, annotated list of JavaScript, Node, Express, Angular, React, and ES6 resources for leveling up rapidly."
+title: "Full Stack JavaScript Resources"
+description: "A curated, annotated list of JavaScript, Node, Express, Angular, React, and ES6 resources for leveling up rapidly."
 group: navigation
 ---
 {% include JB/setup %}
