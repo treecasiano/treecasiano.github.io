@@ -1,9 +1,10 @@
 ---
-layout: page
-title: "Full Stack JavaScript Resources"
-description: "A curated, annotated list of JavaScript, Node, Express, Angular, React, and ES6 resources for leveling up rapidly."
+
+layout: page title: "Full Stack JavaScript Resources" description: "A curated, annotated list of JavaScript, Node, Express, Angular, React, and ES6 resources for leveling up rapidly."
+
 group: navigation
----
+-----------------
+
 {% include JB/setup %}
 
 The Internet is rife with JavaScript resources for the very beginner, but what do you do once you have outgrown the need for training wheels? Everyone says "contribute to open source!" or "build real world projects using tool X and framework Y." Sure, that sounds great in theory, but it's easy to flounder or feel intimidated. It can be challenging to find tutorials and projects appropriate for those feeling stuck at the no-longer-a-beginner-but-still-not-job-ready level.
@@ -18,36 +19,43 @@ The only way to level up quickly is to not spread yourself too thin trying to be
 
 **This is an ongoing work in progress.** I will prune items from the list as resources become outdated.
 
+Intermediate JavaScript
+-----------------------
 
-## Intermediate JavaScript
 <i class="fa fa-book turquoise-icon"></i> [JavaScript: The Good Parts](http://bdcampbell.net/javascript/book/javascript_the_good_parts.pdf)
 
 <i class="fa fa-book turquoise-icon"></i> [Eloquent JavaScript](http://eloquentjavascript.net/)
 
+CSS
+---
 
-## CSS
 <i class="fa fa-bookmark turquoise-icon"></i> [Font Awesome Icon Cheatsheet](https://fortawesome.github.io/Font-Awesome/cheatsheet/)
 
 <i class="fa fa-bookmark turquoise-icon"></i> [Getting Started with SCSS-Lint](http://www.sitepoint.com/getting-started-with-scss-lint/)
 
-## Node.js
+Node.js
+-------
 
 <i class="fa fa-video-camera turquoise-icon"></i> [Learn all the Nodes](https://www.learnallthenodes.com/) is a series of free videos that provide clear, concise demonstrations of JavaScript and Node tips and packages. Videos are short, and the pace is comfortable.
 
-## Frameworks
+Frameworks
+----------
 
 <i class="fa fa-bookmark turquoise-icon"></i> [Express 4.x API](http://expressjs.com/en/api.html)
 
-## Tools
+Tools
+-----
+
 <i class="fa fa-bookmark turquoise-icon"></i> [Gulp API Docs](https://github.com/gulpjs/gulp/blob/master/docs/API.md)
 
-## Blogs and Newsletters
+<i class="fa fa-code-o turquoise-icon"></i> [Joe](https://github.com/karan/joe) is a ".gitignore magician in your command line."
+
+Blogs and Newsletters
+---------------------
 
 <i class="fa fa-bookmark turquoise-icon"></i> [JavaScript Weekly](http://javascriptweekly.com/) is an excellent newsletter that's worth the additional inbox traffic. I use it to stay on top of tips, tricks, tutorials, and editorials related to all things JavaScript.
 
+Project Ideas
+-------------
 
-
-
-
-
-
+<i class="fa fa-bookmark turquoise-icon"></i> [Mega Project List](https://github.com/karan/Projects) is a repo compiled by Karan Goel.The projects listed here are a good way to prep for a tech interview.
