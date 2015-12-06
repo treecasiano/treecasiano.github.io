@@ -1,10 +1,9 @@
 ---
-
-layout: page title: "Full Stack JavaScript Resources" description: "A curated, annotated list of JavaScript, Node, Express, Angular, React, and ES6 resources for leveling up rapidly."
-
+layout: page
+title: "Full Stack JavaScript Resources" description:
+"A curated, annotated list of JavaScript, Node, Express, Angular, React, and ES6 resources for leveling up rapidly."
 group: navigation
------------------
-
+---
 {% include JB/setup %}
 
 The Internet is rife with JavaScript resources for the very beginner, but what do you do once you have outgrown the need for training wheels? Everyone says "contribute to open source!" or "build real world projects using tool X and framework Y." Sure, that sounds great in theory, but it's easy to flounder or feel intimidated. It can be challenging to find tutorials and projects appropriate for those feeling stuck at the no-longer-a-beginner-but-still-not-job-ready level.
@@ -48,7 +47,7 @@ Tools
 
 <i class="fa fa-bookmark turquoise-icon"></i> [Gulp API Docs](https://github.com/gulpjs/gulp/blob/master/docs/API.md)
 
-<i class="fa fa-code-o turquoise-icon"></i> [Joe](https://github.com/karan/joe) is a ".gitignore magician in your command line."
+<i class="fa fa-bookmark turquoise-icon"></i> [Joe](https://github.com/karan/joe) is a ".gitignore magician in your command line."
 
 Blogs and Newsletters
 ---------------------
