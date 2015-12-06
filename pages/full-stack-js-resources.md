@@ -16,7 +16,7 @@ On this page I am assembling a collection of worthwhile resources that are helpi
 
 The only way to level up quickly is to not spread yourself too thin trying to be some kind of multi-class character. It takes forever to level a hybrid ranger-wizard-thief-warrior! Don't do that to yourself. You can waste months of your valuable, finite supply of time on this planet. Specialize first, diversity later as need or whim arises.
 
-**This is an ongoing work in progress.** I will prune items from the list as a resource becomes outdated.
+**This is an ongoing work in progress.** I will prune items from the list as resources become outdated.
 
 
 ## Intermediate JavaScript
