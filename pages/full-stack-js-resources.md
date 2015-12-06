@@ -49,6 +49,9 @@ Tools
 
 <i class="fa fa-bookmark turquoise-icon"></i> [Joe](https://github.com/karan/joe) is a ".gitignore magician in your command line."
 
+<i class="fa fa-bookmark turquoise-icon"></i> [ECMAScript Compatibility Table](http://kangax.github.io/compat-table/es5/) will help you as we all make our journey into ES6.
+
+
 Blogs and Newsletters
 ---------------------
 
