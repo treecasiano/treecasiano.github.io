@@ -37,6 +37,8 @@ Node.js
 
 <i class="fa fa-video-camera turquoise-icon"></i> [Learn all the Nodes](https://www.learnallthenodes.com/) is a series of free videos that provide clear, concise demonstrations of JavaScript and Node tips and packages. Videos are short, and the pace is comfortable.
 
+<i class="fa fa-github-alt turquoise-icon"></i> The [n package](https://github.com/tj/n) is a delightfully simple Node version manager.
+
 Frameworks
 ----------
 
@@ -47,7 +49,7 @@ Tools
 
 <i class="fa fa-bookmark turquoise-icon"></i> [Gulp API Docs](https://github.com/gulpjs/gulp/blob/master/docs/API.md)
 
-<i class="fa fa-bookmark turquoise-icon"></i> [Joe](https://github.com/karan/joe) is a ".gitignore magician in your command line."
+<i class="fa fa-github-alt turquoise-icon"></i> [Joe](https://github.com/karan/joe) is a ".gitignore magician in your command line."
 
 <i class="fa fa-bookmark turquoise-icon"></i> [ECMAScript Compatibility Table](http://kangax.github.io/compat-table/es5/) will help you as we all make our journey into ES6.
 
