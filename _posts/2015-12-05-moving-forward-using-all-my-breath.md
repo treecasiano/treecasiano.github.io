@@ -29,6 +29,6 @@ I still don't really know what to do with my Make Perfect app. I added Sass and 
 My love affair with PyCharm continues to deepen. I think we're in it for the long haul, though I do fool around with Atom on the side. PyCharm has almost all the same functionality as WebStorm, so it's great for JavaScript development and helps when I find myself back in Python land. If I weren't already married, I'd probably marry PyCharm.
 
 <hr>
-And on that note, I think it's time to spin up my next Express app and finally learn Angular properly.
+And on that note, I think it's time to spin up my next Express app...
 
 
