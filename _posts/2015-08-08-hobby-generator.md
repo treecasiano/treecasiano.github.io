@@ -2,8 +2,8 @@
 layout: post
 title: "Hobby Generator"
 description: ""
-category: JavaScript
-tags: [Node.js, Express.js, JavaScript]
+category: projects
+tags: [Node.js, Express.js, JavaScript, Heroku]
 excerpt: I told myself I would keep up with my Node.js studies over the summer and all that I learned at Code Fellows, but Django has been a jealous mistress...
 ---
 {% include JB/setup %}
