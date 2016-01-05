@@ -32,12 +32,14 @@ CSS
 
 <i class="fa fa-bookmark turquoise-icon"></i> [Getting Started with SCSS-Lint](http://www.sitepoint.com/getting-started-with-scss-lint/)
 
-Node.js
+Node.js and MEAN Stack Tutorials
 -------
 
 <i class="fa fa-video-camera turquoise-icon"></i> [Learn all the Nodes](https://www.learnallthenodes.com/) is a series of free videos that provide clear, concise demonstrations of JavaScript and Node tips and packages. Videos are short, and the pace is comfortable.
 
-<i class="fa fa-github-alt turquoise-icon"></i> The [n package](https://github.com/tj/n) is a delightfully simple Node version manager.
+<i class="fa fa-bookmark turquoise-icon"></i> [NodeSchool](http://nodeschool.io/) is a great resource for a variety of Node and JS tutorials that you can download and work though using the command line.
+
+<i class="fa fa-bookmark turquoise-icon"></i> [M101JS: MongoDB for Node.js Developers](https://university.mongodb.com/courses/M101JS/about) will help you get started with MongoDB. And it's free!
 
 Frameworks
 ----------
@@ -47,11 +49,13 @@ Frameworks
 Tools
 -----
 
-<i class="fa fa-bookmark turquoise-icon"></i> [Gulp API Docs](https://github.com/gulpjs/gulp/blob/master/docs/API.md)
+<i class="fa fa-github-alt turquoise-icon"></i> The [n package](https://github.com/tj/n) is a delightfully simple Node version manager.
+
+<i class="fa fa-bookmark turquoise-icon"></i> [Gulp API Docs](https://github.com/gulpjs/gulp/blob/master/docs/API.md) I switched from Grunt to Gulp recently so I can concatenate and minify my JS files and run tests with ease.
 
 <i class="fa fa-github-alt turquoise-icon"></i> [Joe](https://github.com/karan/joe) is a ".gitignore magician in your command line."
 
-<i class="fa fa-bookmark turquoise-icon"></i> [ECMAScript Compatibility Table](http://kangax.github.io/compat-table/es5/) will help you as we all make our journey into ES6.
+<i class="fa fa-bookmark turquoise-icon"></i> [ECMAScript Compatibility Table](http://kangax.github.io/compat-table/es5/) is helpful as you make your journey into ES6.
 
 
 Blogs and Newsletters
