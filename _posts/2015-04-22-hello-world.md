@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hello World!"
-description: ""
+description: "The one in which I get this thing started."
 category:
 tags: [Jekyll]
 excerpt: This blog will document my transition into the world of web development...

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Code Fellows Week Four"
-description: ""
+description: "The one in which I express my love of Code Fellows."
 category: training
 tags: [Node.js, Express.js, Code Fellows, JavaScript]
 excerpt: My month long Code Fellows JavaScript class is now over...
@@ -16,4 +16,4 @@ We also had to create a second translator. I chose [Alfabeto Farfallino](http://
 
 My [JavaScript Translation Services application](http://murmuring-escarpment-1797.herokuapp.com/) is now deployed to Heroku. It's not a particularly useful application, but it was fantastic practice and seems worthy of inclusion in my developer portfolio. After I refactor the JavaScript in my [Rock, Paper, Scissors, Lizard, Spock app](http://treecasiano.com/rpsls-js/index.html), I'll have two intermediate level projects to feature on my website. Progress is slow on this front, but steady.
 
-I wish I could afford to attend the Code Fellows JavaScript Development Accelerator. Unfortunately, the grant money I received for training could not be applied to a Code Fellows program because Code Fellows is not yet licensed in the state of Oregon. Nonetheless, I leveled up an order of magnitude more than I could have on my own thanks to the school's' impeccable attention to quality, carefully crafted curriculum, and administrative organization.
+I wish I could afford to attend the Code Fellows JavaScript Development Accelerator. Unfortunately, the grant money I received for training could not be applied to a Code Fellows program because Code Fellows is not yet licensed in the state of Oregon. Nonetheless, I leveled up an order of magnitude more than I could have on my own thanks to the school's impeccable attention to quality, carefully crafted curriculum, and administrative organization.

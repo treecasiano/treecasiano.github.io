@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Code Fellows Week Three"
-description: ""
+description: "The one in which I fall in love with Node.js."
 category: training
 tags: [JavaScript, Code Fellows, Node.js]
 excerpt: This week in my Code Fellows JavaScript Foundations II course we focused on interacting with the DOM using both vanilla JavaScript and jQuery...

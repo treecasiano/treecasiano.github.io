@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Code Fellows Week One"
-description: ""
+description: "The one in which I fall in love with the Fish shell."
 category: training
 tags: [Code Fellows, JavaScript, Git, Fish]
 excerpt: This week I started a four-week course with Code Fellows called JavaScript Foundations II (JS F2)...

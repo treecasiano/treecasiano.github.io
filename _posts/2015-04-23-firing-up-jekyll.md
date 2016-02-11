@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Firing up Jekyll"
-description: ""
+description: "The one in which I pat myself on the back for making Jekyll obey me."
 category: GitHub
 tags: [Jekyll, Code Fellows]
 excerpt: Since yesterday afternoon I have been obsessively making small tweaks to this new Jekyll site...

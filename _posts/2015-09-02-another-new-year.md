@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Another New Year"
-description: ""
+description: "The one in which I look back on a code-packed year."
 category: career development
 tags: [birthday, front-end fangirl]
 excerpt: Today is my birthday and a good day to reflect on how far I've come...

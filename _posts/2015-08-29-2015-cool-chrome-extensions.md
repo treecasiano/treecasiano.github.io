@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cool Chrome Extensions"
-description: ""
+description: "The one in which I share some cool Chrome apps."
 category: tricks of the trade
 tags: [Chrome, Developer Tools]
 excerpt: I love finding tools with a low learning curve that make my life as a developer just a tiny bit easier. Here are two of the newest additions to my toolbox...

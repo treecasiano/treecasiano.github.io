@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Never Code Alone"
-description: ""
+description: "The one in which I learn all the Node!"
 category: training
 tags: [Node.js, JavaScript, code school]
 excerpt: Learn All the Node...

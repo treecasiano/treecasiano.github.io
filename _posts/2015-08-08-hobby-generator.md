@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hobby Generator"
-description: ""
+description: "The one in which I make progress on my quest to eradicate boredom."
 category: projects
 tags: [Node.js, Express.js, JavaScript, Heroku]
 excerpt: I told myself I would keep up with my Node.js studies over the summer and all that I learned at Code Fellows, but Django has been a jealous mistress...

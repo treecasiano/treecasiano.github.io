@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Moving Forward Using All My Breath"
-description: ""
+description: "The one in which I am too busy to post but do it anyway."
 category: career development
 tags: [Hack Oregon, PyCharm, tech interviews, JavaScript, Node.js, Express, Italian]
 excerpt: The past three months have been a blur...
