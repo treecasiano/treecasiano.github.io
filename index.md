@@ -21,19 +21,4 @@ I am addicted to code. And guitars. There is no cure.
 </ul>
 <i class="fa fa-book fa-1x"></i> [view archive](archive.html)
 <br />
-<br />
-<br />
-
-#### Portland Tech Community Resources
-
-<ul>
-  <li><a href="http://www.meetup.com/PyLadies-PDX/">PyLadies PDX</a></li>
-  <li><a href="http://www.meetup.com/Women-Who-Code-Portland/">Women Who Code Portland</a></li>
-  <li><a href="http://chicktech.org">ChickTech</a></li>
-  <li><a href="http://siliconflorist.com">The Silicon Florist</a></li>
-  <li><a href="http://codefellows.org">Code Fellows</a></li>
-  <li><a href="http://teamtreehouse.com">Treehouse</a></li>
-</ul>
-
-<br />
 
