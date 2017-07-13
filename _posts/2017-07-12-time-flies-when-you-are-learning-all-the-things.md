@@ -28,10 +28,8 @@ developer drops off as soon as they take the first real dev job. Just trying to 
 a valiant attempt to spin up something new for my portfolio that reflects all 
 the hard-won skills developed over the past year. 
 
-Oh, and I'm moving back to Portland. There will be much rejoicing!
+Oh, and I'm moving back to Portland. More on that later!
   
-  Onward!
- 
  
 
 
