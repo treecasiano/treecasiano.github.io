@@ -14,8 +14,6 @@ I attended most of the two-day conference, my participation being slightly imped
 
 The presentations can all be found on [YouTube](https://youtu.be/O28Knn00qYo?list=PLfMzBWSH11xYjL8oFumSfzOf6-kr8_t-o) and the [slides are also available online](http://events.linuxfoundation.org/events/node-interactive/program/slides). I highly recommend the entire collection of event videos to anyone interested in the state of Node development. I learned that the Node ecosystem is much bigger and more interesting than I realized, and it's growing at a seemingly exponential rate.
 
- As a side note, I was one of only a handful of women at this massive event. This fact didn't bother me at all. In fact, I found it pretty great because the women's bathrooms were usually empty and therefore pristine.
-
 ## DIY Node-based Code School
 
 Following the conference, I joined forces with a friend to create our own Node-focused bootcamp. We are meeting several times a week, studying and coding in the comfort of my living room, seated on my comfortable purple couches. We are also working independently on tasks in between our meetings, using Trello to keep us organized and accountable. The key things we are focusing on this month include MongoDB, general JS algorithm practice, Bootstrap, and job hunting. We're using a combination of Treehouse, Free Code Camp, NodeSchool, some books from Packt Publishing, a [MongoDB course for Node developers from Mongo University](https://university.mongodb.com/courses/M101JS/about), a [GitHub repo full of Front End Dev questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions), and YouTube tutorials.
