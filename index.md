@@ -1,14 +1,12 @@
 ---
 layout: page
 title: Leveling Up!
-tagline: from code noob to dev pro in 347 easy steps
+tagline: 
 ---
 {% include JB/setup %}
 
-#### My name is Tree Casiano, and I am a web developer.
-
-I am addicted to code. And guitars. There is no cure.
-
+#### My name is Tree Casiano. I am a web applications developer.
+I make the CSS obey and wrangle the Angular into submission. 
 <hr>
 
 #### Recent Blog Posts
