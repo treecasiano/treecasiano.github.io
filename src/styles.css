@@ -1,0 +1,352 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: "Voltaire", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 0 25px;
+}
+
+
+/*NAVIGATION STYLES*/
+
+.tc-nav__homeLink {
+    font-weight: 400;
+}
+
+.tc-nav__homeLink:hover {
+    font-weight: 700;
+}
+
+.navbar-custom {
+    background-color: black;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.navbar-custom .nav li a {
+    transition: background .3s ease-in-out;
+}
+
+.navbar-custom .nav li a:hover {
+    background-color: transparent;
+    color: mediumturquoise;
+    outline: none;
+}
+
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a:active {
+    background-color: transparent;
+    outline: none;
+    border-bottom: 2px solid paleturquoise;
+}
+
+.navbar-custom .nav li.active {
+    outline: none;
+}
+
+.navbar-custom .nav li.active a {
+    background: linear-gradient(90deg, darkcyan, darkturquoise, mediumturquoise, paleturquoise);
+    color: black;
+}
+
+.navbar-custom .nav li.active a:hover {
+    color:white;
+}
+
+.navbar-custom a {
+    color: white;
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: 700;
+}
+
+.navbar-custom .navbar-brand:focus {
+    outline: none;
+    border-bottom: 2px solid paleturquoise;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle {
+    color: white;
+    font-size: 16px;
+    padding: 4px 6px;
+}
+
+.navbar-toggle:focus,
+.navbar-toggle:active {
+    color: aqua;
+    outline: none;
+}
+
+.tc-headings {
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 0 35px;
+    text-transform: uppercase;
+}
+
+.intro {
+    background: black url(../img/intro-bg.jpg) no-repeat scroll bottom center;
+    background-size: cover;
+    color: white;
+    display: table;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.intro .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.tc-landingPage__heading--main {
+    font-size: 40px;
+}
+
+.tc-introText--main {
+    font-size: 20px;
+}
+
+.tc-mainHeader__icon--circular {
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 100% !important;
+    color: white;
+    font-size: 40px;
+    height: 70px;
+    margin-top: 15px;
+    padding: 7px 16px;
+    transition: background 1s ease-in-out;
+    width: 70px;
+}
+
+.tc-mainHeader__icon--circular:hover,
+.tc-mainHeader__icon--circular:focus {
+        background: black;
+        color: darkturquoise;
+        border: 3px solid aqua;
+        outline: none;
+    }
+
+.tc-aboutSection {
+    min-height: 100%;
+    padding-top: 100px;
+}
+
+.tc-projectSection {
+    background: black url(../img/downloads-bg.jpg) no-repeat scroll center center;
+    background-size: cover;
+    color: white;
+    min-height: 100%;
+    padding: 100px 0;
+    width: 100%;
+
+}
+
+.tc-contactSection {
+    min-height: 50%;
+    padding: 100px 0;
+}
+
+
+/*Overrides of Bootstrap button styles*/
+
+.btn {
+    border-radius: 0;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.btn-default {
+    background-color: transparent;
+    border: 1px solid mediumturquoise;
+    color: white;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+        background: linear-gradient(90deg, darkcyan, darkturquoise, mediumturquoise, paleturquoise);
+        border: 1px solid mediumturquoise;
+        color: black;
+        outline: none;
+}
+
+
+/*Bootstrap overrides for the thumbnails*/
+
+.thumbnail {
+    border: 2px solid transparent;
+    overflow: hidden;
+    position: relative;
+}
+
+.thumbnail:hover .caption,
+.thumbnail:focus .caption,
+.thumbnail:hover,
+.thumbnail:focus {
+    border: 2px solid aqua;
+    top:0;
+}
+
+.caption {
+    background:rgba(0, 0, 0, 0.85);
+    color:#fff !important;
+    height:100%;
+    padding:2%;
+    position:absolute;
+    right:0;
+    text-align:center;
+    top:-105%;
+    transition: all 0.5s ease-in-out;
+    width:100%;
+    z-index:2;
+}
+
+.caption h3 {
+    color: darkturquoise;
+    background: linear-gradient(90deg, darkcyan, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.caption p {
+    color: paleturquoise;
+    font-size: 16px;
+}
+
+.tc-caption__link {
+    border: 1px solid transparent;
+    margin-bottom: 5px;
+}
+
+.tc-caption__link:focus {
+    font-weight: bold;
+    border: 1px solid aqua;
+}
+
+/*SOCIAL BUTTONS*/
+ul.tc-socialMedia__links {
+    margin-top: 0;
+}
+
+/*FOOTER*/
+.tc-footer {
+    display: flex;
+    border: white;
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-between;
+    padding: 125px 0;
+}
+
+.tc-footer__text {
+    align-self: center;
+    margin: 0;
+
+}
+
+/*MEDIA QUERIES*/
+@media(min-width:768px) {
+
+    p {
+        font-size: 20px;
+        line-height: 1.6;
+        margin: 0 0 35px;
+    }
+
+    .navbar-custom {
+        background: transparent;
+        border-bottom: none;
+        letter-spacing: 1px;
+        padding: 20px 0;
+        transition: background .5s ease-in-out, padding .5s ease-in-out;
+    }
+
+    .navbar-custom.top-nav-collapse {
+        background: black;
+        padding: 0;
+    }
+
+    .tc-aboutSection {
+        padding: 100px 0 200px 0;
+    }
+
+    .tc-projectSection {
+        padding: 100px 0 200px 0;
+    }
+
+    .tc-contactSection {
+        padding: 100px 0 200px 0;
+    }
+
+     .caption h3 {
+        font-size: 22px;
+        margin-bottom: 25px;
+        margin-top: 25px;
+    }
+
+    .intro {
+        height: 100%;
+        padding: 0;
+    }
+
+    .tc-landingPage__heading--main {
+        font-size: 100px;
+    }
+
+    .tc-introText--main {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-device-width: 768px) {
+
+    .caption {
+        position: relative;
+        transition: none;
+    }
+
+}
+
+@media(max-width:767px) {
+
+    ul.tc-socialMedia__links li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.tc-socialMedia__links li:last-child {
+        margin-bottom: 0;
+    }
+
+}
+
+@media(max-width:1199px) {
+
+    ul.tc-socialMedia__links {
+        margin-top: 15px;
+    }
+
+}
+
+
+

@@ -1,0 +1,22 @@
+{
+  "name": "treecasiano-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio of Tree Casiano",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-css": "postcss src/*.css --use autoprefixer --output css/styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/treecasiano/treecasiano.github.io"
+  },
+  "author": "Tree Casiano",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "postcss-cli": "^4.1.1"
+  },
+  "browserslist": [
+    "> 10%"
+  ]
+}
