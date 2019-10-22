@@ -8,11 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://treecasiano@bitbucket.org/treecasiano/treecasiano.bitbucket.io.git"
+    "url": "git+https://github.com/treecasiano/treecasiano.github.io"
   },
   "author": "Tree Casiano",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/treecasiano/treecasiano.bitbucket.io#readme",
   "devDependencies": {
     "autoprefixer": "^7.1.6",
     "postcss-cli": "^4.1.1"
