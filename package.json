@@ -18,5 +18,9 @@
   },
   "browserslist": [
     "> 10%"
-  ]
+  ],
+  "dependencies": {
+    "fsevents": "^1.2.9",
+    "node-sass": "^4.13.0"
+  }
 }
