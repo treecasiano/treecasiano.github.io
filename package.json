@@ -1,6 +1,6 @@
 {
   "name": "treecasiano-portfolio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Portfolio of Tree Casiano",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,7 +13,7 @@
   "author": "Tree Casiano",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^7.1.6",
+    "autoprefixer": "^10.4.13",
     "postcss-cli": "^4.1.1"
   },
   "browserslist": [
@@ -21,6 +21,6 @@
   ],
   "dependencies": {
     "fsevents": "^1.2.9",
-    "node-sass": "^4.13.1"
+    "node-sass": "^6.0.1"
   }
 }
