@@ -1,0 +1,67 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Home
+  order: 1
+numberOfLatestPostsToShow: 3
+---
+<h1>Hello, World!</h1>
+<p>
+		I am a software developer, erstwhile piano teacher, cartography grad, aspiring polyglot, accessibility advocate, and unabashed karaoke enthusiast.
+</p>
+<h2>Tools of My Trade</h2>
+<p>JavaScript/TypeScript. Vue. Vuetify. Node.js. Express. Leaflet. MySQL. PostgreSQL. Jest. Cypress. AWS. Agile methodologies. Relentless persistence. Meticulous attention to detail. Conscientious code hygiene.</p>
+<h2>Favorite Things</h2>
+<p>Music. Maps. Math. Words. Woods. Cats. Code. Craft. Cake. Paints. Pens. Guitars. Mandolins. Pianos.
+		<span>Star Trek.</span> Orchids.
+		<span>Oxford commas.</span>
+		<span>Indian food.</span>
+		<span>Italian desserts.</span>
+		<span>Icelandic's interdental fricatives.</span>
+</p>
+<h2>Projects</h2>
+<h3>PDX Metro Food Environment MAP</h3>
+<p>Interactive web map made with Leaflet, Vue.js, Vuetify, PostgreSQL, Node, Express, and data from the USDA Economic Research Service Food Access Research Atlas. Displays food access indicators and sources of healthy food in the Portland Metro area.</p>
+<p>
+	<a href="https://github.com/treecasiano/pdx-food-map">view code</a>
+	<a href="img/pdx_food_map_executive_summary.pdf">executive summary</a>
+	<a href="https://www.youtube.com/watch?v=xQSBhPvrmUw&feature=youtu.be">view demo</a>
+</p>
+
+
+<h3>Nitrate Levels and Cancer Incidence Analysis Map</h3>
+<p>Interactive map that lets users explore the relationship between nitrate levels and cancer analysis in Wisconsin census tracts. Made with Vue, Vuetify, Leaflet, and Turf.js. </p>
+<p>
+	<a href="https://github.com/treecasiano/nitrate-cancer-analysis">view code</a>
+	<a href="https://treecasiano.github.io/nitrate-cancer-analysis">view map</a>
+</p>
+
+<h3>Map of Median Home Values</h3>
+<p>Interactive time series map made with Leaflet using Zillow Home Value Index Data.</p>
+<p>
+	<a href="https://github.com/treecasiano/leaflet-zhvi">view code</a>
+	<a href="https://treecasiano.github.io/leaflet-zhvi/">view map</a>
+</p>
+
+{% set postsCount = collections.posts | length %}
+{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
+<h2>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h2>
+
+{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+{% set postslistCounter = postsCount %}
+{% include "postslist.njk" %}
+
+{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+{% if morePosts > 0 %}
+<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
+{% endif %}
+
+{# List every content page in the project #}
+{#
+<ul>
+	{%- for entry in collections.all %}
+	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
+	{%- endfor %}
+</ul>
+#}
+
