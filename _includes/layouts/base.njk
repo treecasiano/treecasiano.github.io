@@ -9,6 +9,8 @@
 		{#- Atom and JSON feeds included by default #}
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
 		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
@@ -54,8 +56,12 @@
 			{{ content | safe }}
 		</main>
 
-		<footer></footer>
+		<footer class="tc-footer">
+			<p class="tc-footer__text">&copy; Tree Casiano 2023</p>
+			<p class="tc-footer__text">Made with code and caffeine.</p>
+		</footer>
 
 		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
 	</body>
+
 </html>
