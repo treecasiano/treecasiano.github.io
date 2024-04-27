@@ -1,6 +1,6 @@
 /* Defaults */
 :root {
-	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family: "Ysabeau Office", -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono,
 		Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono,
 		Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New,
@@ -13,12 +13,24 @@
 	--color-gray-50: #c0c0c0;
 	--color-gray-90: #333;
 
+	--color-ocean-1: hsl(190, 36%, 10%);
+	--color-ocean-2: hsl(190, 36%, 20%);
+	--color-ocean-3: hsl(190, 36%, 30%);
+	--color-ocean-4: hsl(190, 36%, 40%);
+	--color-ocean-5: hsl(190, 36%, 50%);
+	--color-ocean-6: hsl(190, 36%, 60%);
+	--color-ocean-7: hsl(190, 36%, 70%);
+	--color-ocean-9: hsl(190, 36%, 90%);
+
 	--background-color: #fff;
 
-	--text-color: var(--color-gray-90);
-	--text-color-link: #082840;
-	--text-color-link-active: #5f2b48;
-	--text-color-link-visited: #17050f;
+	--header-anchor-color: var(--color-ocean-2);
+
+	--text-color: var(--color-ocean-2);
+	--text-color-link: var(--color-ocean-3);
+	--text-color-link-visited: var(--color-ocean-4);
+	--text-color-link-active: var(--color-ocean-7);
+	--text-color-link-hover: var(--color-ocean-7);
 
 	--syntax-tab-size: 2;
 }
@@ -29,7 +41,8 @@
 		--color-gray-50: #c0c0c0;
 		--color-gray-90: #dad8d8;
 
-		/* --text-color is assigned to --color-gray-_ above */
+		/* --text-color is assigned to --color-ocean-_ above */
+		--text-color: var(--color-ocean-9);
 		--text-color-link: #1493fb;
 		--text-color-link-active: #6969f7;
 		--text-color-link-visited: #a6a6f8;
@@ -86,7 +99,9 @@ a[href] {
 a[href]:visited {
 	color: var(--text-color-link-visited);
 }
-a[href]:hover,
+a[href]:hover {
+	color: var(--text-color-link-hover);
+}
 a[href]:active {
 	color: var(--text-color-link-active);
 }
@@ -264,7 +279,7 @@ a[href].header-anchor:hover {
 }
 a[href].header-anchor:focus,
 :hover > a[href].header-anchor {
-	color: #aaa;
+	color: var(--header-anchor-color);
 }
 
 h2 + .header-anchor {
