@@ -1,6 +1,6 @@
 {
 	"name": "treecasiano-portfolio",
-	"version": "1.0.1",
+	"version": "2.0.0",
 	"description": "Portfolio of Tree Casiano",
 	"scripts": {
 		"build": "npx @11ty/eleventy",
