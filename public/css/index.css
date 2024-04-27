@@ -21,18 +21,28 @@
 	--color-ocean-6: hsl(190, 36%, 60%);
 	--color-ocean-7: hsl(190, 36%, 70%);
 	--color-ocean-9: hsl(190, 36%, 90%);
+	--color-ocean-10: hsl(190, 36%, 95%);
 
-	--background-color: #fff;
+	--background-color: var(--color-ocean-10);
 
-	--header-anchor-color: var(--color-ocean-2);
+	--header-anchor-color: var(--color-ocean-1);
 
-	--text-color: var(--color-ocean-2);
+	--text-color: var(--color-ocean-1);
 	--text-color-link: var(--color-ocean-3);
 	--text-color-link-visited: var(--color-ocean-4);
 	--text-color-link-active: var(--color-ocean-7);
 	--text-color-link-hover: var(--color-ocean-7);
 
 	--syntax-tab-size: 2;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: var(--color-ocean-3);
+	}
 }
 
 @media (prefers-color-scheme: dark) {
@@ -275,11 +285,11 @@ a[href].header-anchor:visited {
 }
 a[href].header-anchor:focus,
 a[href].header-anchor:hover {
-	text-decoration: underline;
+	text-decoration: none;
 }
 a[href].header-anchor:focus,
 :hover > a[href].header-anchor {
-	color: var(--header-anchor-color);
+	color: transparent;
 }
 
 h2 + .header-anchor {
