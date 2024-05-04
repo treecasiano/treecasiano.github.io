@@ -1,6 +1,7 @@
 /* Defaults */
 :root {
-	--font-family: "Ysabeau Office", -apple-system, system-ui, sans-serif;
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-headings: "Poetsen One", -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono,
 		Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono,
 		Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New,
@@ -9,29 +10,74 @@
 
 /* Theme colors */
 :root {
-	--color-gray-20: #e0e0e0;
-	--color-gray-50: #c0c0c0;
-	--color-gray-90: #333;
+	--color-gray-10: hsl(0, 0%, 10%);
+	--color-gray-20: hsl(0, 0%, 20%);
+	--color-gray-30: hsl(0, 0%, 30%);
+	--color-gray-40: hsl(0, 0%, 40%);
+	--color-gray-50: hsl(0, 0%, 50%);
+	--color-gray-60: hsl(0, 0%, 60%);
+	--color-gray-70: hsl(0, 0%, 70%);
+	--color-gray-80: hsl(0, 0%, 80%);
+	--color-gray-90: hsl(0, 0%, 90%);
+	--color-gray-95: hsl(0, 0%, 95%);
 
-	--color-ocean-1: hsl(190, 36%, 10%);
-	--color-ocean-2: hsl(190, 36%, 20%);
-	--color-ocean-3: hsl(190, 36%, 30%);
-	--color-ocean-4: hsl(190, 36%, 40%);
-	--color-ocean-5: hsl(190, 36%, 50%);
-	--color-ocean-6: hsl(190, 36%, 60%);
-	--color-ocean-7: hsl(190, 36%, 70%);
-	--color-ocean-9: hsl(190, 36%, 90%);
-	--color-ocean-10: hsl(190, 36%, 95%);
+	--color-ocean-10: hsl(190, 36%, 10%);
+	--color-ocean-20: hsl(190, 36%, 20%);
+	--color-ocean-30: hsl(190, 36%, 30%);
+	--color-ocean-40: hsl(190, 36%, 40%);
+	--color-ocean-50: hsl(190, 36%, 50%);
+	--color-ocean-60: hsl(190, 36%, 60%);
+	--color-ocean-70: hsl(190, 36%, 70%);
+	--color-ocean-80: hsl(190, 36%, 80%);
+	--color-ocean-90: hsl(190, 36%, 90%);
 
-	--background-color: var(--color-ocean-10);
+	--color-verdigris-10: hsl(176, 42%, 10%);
+	--color-verdigris-20: hsl(176, 42%, 20%);
+	--color-verdigris-30: hsl(176, 42%, 30%);
+	--color-verdigris-40: hsl(176, 42%, 40%);
+	--color-verdigris-50: hsl(176, 42%, 50%);
+	--color-verdigris-60: hsl(176, 42%, 60%);
+	--color-verdigris-70: hsl(176, 42%, 70%);
+	--color-verdigris-80: hsl(176, 42%, 80%);
+	--color-verdigris-90: hsl(176, 42%, 90%);
 
-	--header-anchor-color: var(--color-ocean-1);
 
-	--text-color: var(--color-ocean-1);
-	--text-color-link: var(--color-ocean-3);
-	--text-color-link-visited: var(--color-ocean-4);
-	--text-color-link-active: var(--color-ocean-7);
-	--text-color-link-hover: var(--color-ocean-7);
+	--color-medium-red-violet-10: hsl(320, 50%, 10%);
+	--color-medium-red-violet-20: hsl(320, 50%, 20%);
+	--color-medium-red-violet-30: hsl(320, 50%, 30%);
+	--color-medium-red-violet-40: hsl(320, 50%, 40%);
+	--color-medium-red-violet-50: hsl(320, 50%, 50%);
+	--color-medium-red-violet-60: hsl(320, 50%, 60%);
+	--color-medium-red-violet-70: hsl(320, 50%, 70%);
+	--color-medium-red-violet-80: hsl(320, 50%, 80%);
+	--color-medium-red-violet-90: hsl(320, 50%, 90%);
+
+
+  --color-muted-indigo-10: hsl(240, 15%, 10%);
+	--color-muted-indigo-15: hsl(240, 15%, 15%);
+	--color-muted-indigo-20: hsl(240, 15%, 20%);
+	--color-muted-indigo-25: hsl(240, 15%, 25%);
+	--color-muted-indigo-30: hsl(240, 15%, 30%);
+	--color-muted-indigo-40: hsl(240, 15%, 40%);
+	--color-muted-indigo-50: hsl(240, 15%, 50%);
+	--color-muted-indigo-60: hsl(240, 15%, 60%);
+	--color-muted-indigo-70: hsl(240, 15%, 70%);
+	--color-muted-indigo-80: hsl(240, 15%, 80%);
+	--color-muted-indigo-90: hsl(240, 15%, 90%);
+
+
+	--background-color: var(--color-gray-10);
+	--header-anchor-color: var(--color-muted-indigo-10);
+	--color-headings: var(--color-muted-indigo-30);
+	--color-header-border: var(--color-red-violet-20);
+	--color-postlist-item-before: var(--color-gray-30);
+
+	--text-color: var(--color-muted-indigo-20);
+	--text-color-link: var(--color-ocean-40);
+	--text-color-link-visited: var(--color-muted-indigo-70);
+	--text-color-link-visited:hover: var(--color-muted-indigo-60);
+	--text-color-link-active: var(--color-muted-indigo-70);
+	--text-color-link-hover: var(--color-muted-indigo-60);
 
 	--syntax-tab-size: 2;
 
@@ -41,9 +87,18 @@
 	h4,
 	h5,
 	h6 {
-		color: var(--color-ocean-3);
+		color: var(--color-headings);
+		font-family: var(--font-family-headings);
+	}
+
+	h1 {
+		background: linear-gradient(90deg, hsl(230, 42%, 20%) 0%, hsl(186, 42%, 30%) 10%, hsl(190, 36%, 42%) 40%, hsl(192, 38%, 60%) 45%);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 }
+
 
 @media (prefers-color-scheme: dark) {
 	:root {
@@ -72,7 +127,7 @@ body {
 	margin: 0 auto;
 	font-family: var(--font-family);
 	color: var(--text-color);
-	background-color: var(--background-color);
+	background: (var(--background-color));
 }
 html {
 	overflow-y: scroll;
@@ -103,18 +158,32 @@ li {
 	line-height: 1.5;
 }
 
-a[href] {
+a[href]:not(.home-link, .nav-item a) {
 	color: var(--text-color-link);
+	display: inline-block;
+	text-decoration: none;
+}
+
+a[href]:active {
+	color: var(--text-color-link-active);
 }
 a[href]:visited {
 	color: var(--text-color-link-visited);
 }
 a[href]:hover {
-	color: var(--text-color-link-hover);
+	background: linear-gradient(90deg, hsl(230, 42%, 20%) 0%, hsl(186, 42%, 30%) 10%, hsl(190, 36%, 42%) 40%, hsl(192, 38%, 60%) 45%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
-a[href]:active {
-	color: var(--text-color-link-active);
+a[href]:visited:hover {
+	background: linear-gradient(90deg, hsl(230, 42%, 20%) 0%, hsl(186, 42%, 30%) 10%, hsl(190, 36%, 42%) 40%, hsl(192, 38%, 60%) 45%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-decoration: none;
 }
+
 
 main {
 	padding: 1rem;
@@ -124,7 +193,7 @@ main :first-child {
 }
 
 header {
-	border-bottom: 1px dashed var(--color-gray-20);
+	border-bottom: 1px solid var(--color-gray-60);
 }
 header:after {
 	content: "";
@@ -171,11 +240,13 @@ code {
 
 /* Header */
 header {
-	display: flex;
-	gap: 1em 0.5em;
-	flex-wrap: wrap;
 	align-items: center;
-	padding: 1em;
+	display: flex;
+	flex-wrap: wrap;
+	font-family: var(--font-family-headings);
+	font-size: 1.25rem;
+	gap: 1rem 0.5rem;
+	padding: 1rem;
 }
 .home-link {
 	font-size: 1em; /* 16px /16 */
@@ -201,8 +272,9 @@ header {
 	text-decoration: none;
 }
 .nav a[href][aria-current="page"] {
-	text-decoration: underline;
+	border-bottom: 2px solid var(--text-color-link);
 }
+
 
 /* Posts list */
 .postlist {
@@ -228,7 +300,7 @@ header {
 .postlist-date,
 .postlist-item:before {
 	font-size: 0.8125em; /* 13px /16 */
-	color: var(--color-gray-90);
+	color: var(--color-post-list-item-before);
 }
 .postlist-date {
 	word-spacing: -0.5px;
@@ -316,6 +388,7 @@ ul.tc-socialMedia__links > li {
 	display: flex;
 	border: white;
 	flex-direction: column;
+	font-family: var(--font-family-headings);
 	height: 300px;
 	justify-content: space-between;
 	padding: 125px 0;
