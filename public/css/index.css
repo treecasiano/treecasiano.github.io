@@ -65,21 +65,59 @@
 	--color-muted-indigo-80: hsl(240, 15%, 80%);
 	--color-muted-indigo-90: hsl(240, 15%, 90%);
 
+	--color-navy-blue-10: hsl(220, 50%, 10%);
+	--color-navy-blue-20: hsl(220, 50%, 20%);
+	--color-navy-blue-30: hsl(220, 50%, 30%);
+	--color-navy-blue-40: hsl(220, 50%, 40%);
+	--color-navy-blue-50: hsl(220, 50%, 50%);
+	--color-navy-blue-60: hsl(220, 50%, 60%);
+	--color-navy-blue-70: hsl(220, 50%, 70%);
+	--color-navy-blue-80: hsl(220, 50%, 80%);
+	--color-navy-blue-90: hsl(220, 50%, 90%);
+	--color-navy-blue-95: hsl(220, 50%, 95%);
 
-	--background-color: var(--color-gray-10);
-	--header-anchor-color: var(--color-muted-indigo-10);
-	--color-headings: var(--color-muted-indigo-30);
+	--color-violet-10: hsl(270, 50%, 10%);
+	--color-violet-20: hsl(270, 50%, 20%);
+	--color-violet-30: hsl(270, 50%, 30%);
+	--color-violet-40: hsl(270, 50%, 40%);
+	--color-violet-50: hsl(270, 50%, 50%);
+	--color-violet-60: hsl(270, 50%, 60%);
+	--color-violet-70: hsl(270, 50%, 70%);
+	--color-violet-80: hsl(270, 50%, 80%);
+	--color-violet-90: hsl(270, 50%, 90%);
+	--color-violet-95: hsl(270, 50%, 95%);
+
+	--color-magenta-10: hsl(300, 50%, 10%);
+	--color-magenta-20: hsl(300, 50%, 20%);
+	--color-magenta-30: hsl(300, 50%, 30%);
+	--color-magenta-40: hsl(300, 50%, 40%);
+	--color-magenta-50: hsl(300, 50%, 50%);
+	--color-magenta-60: hsl(300, 50%, 60%);
+	--color-magenta-70: hsl(300, 50%, 70%);
+	--color-magenta-80: hsl(300, 50%, 80%);
+	--color-magenta-90: hsl(300, 50%, 90%);
+	--color-magenta-95: hsl(300, 50%, 95%);
+
+
+
+
+	--background-color:var(--color-violet-20);
+	--header-anchor-color: var(--color-magenta-50);
+	--color-headings: var(--color-magenta-90);
 	--color-header-border: var(--color-red-violet-20);
 	--color-postlist-item-before: var(--color-gray-30);
 
-	--text-color: var(--color-muted-indigo-20);
-	--text-color-link: var(--color-ocean-40);
-	--text-color-link-visited: var(--color-muted-indigo-70);
-	--text-color-link-visited:hover: var(--color-muted-indigo-60);
+	--text-color: var(--color-muted-indigo-90);
+	--text-color-link: var(--color-magenta-80);
+	--text-color-link-visited: var(--color-magenta-70);
+	--text-color-link-visited:hover: var(--color-magenta-60);
 	--text-color-link-active: var(--color-muted-indigo-70);
 	--text-color-link-hover: var(--color-muted-indigo-60);
 
 	--syntax-tab-size: 2;
+
+
+	--gradient: linear-gradient(90deg, hsl(240, 7%, 95%) 0%, hsl(301, 57%, 72%) 10%, hsl(299, 45%, 52%) 40%, hsl(300, 83%, 60%) 45%);
 
 	h1,
 	h2,
@@ -92,7 +130,14 @@
 	}
 
 	h1 {
-		background: linear-gradient(90deg, hsl(230, 42%, 20%) 0%, hsl(186, 42%, 30%) 10%, hsl(190, 36%, 42%) 40%, hsl(192, 38%, 60%) 45%);
+		background: var(--gradient);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	h2 {
+		background: var(--gradient);
 		-webkit-background-clip: text;
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
@@ -127,7 +172,7 @@ body {
 	margin: 0 auto;
 	font-family: var(--font-family);
 	color: var(--text-color);
-	background: (var(--background-color));
+	background: var(--background-color);
 }
 html {
 	overflow-y: scroll;
@@ -171,13 +216,13 @@ a[href]:visited {
 	color: var(--text-color-link-visited);
 }
 a[href]:hover {
-	background: linear-gradient(90deg, hsl(230, 42%, 20%) 0%, hsl(186, 42%, 30%) 10%, hsl(190, 36%, 42%) 40%, hsl(192, 38%, 60%) 45%);
+	background: var(--gradient);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 a[href]:visited:hover {
-	background: linear-gradient(90deg, hsl(230, 42%, 20%) 0%, hsl(186, 42%, 30%) 10%, hsl(190, 36%, 42%) 40%, hsl(192, 38%, 60%) 45%);
+	background: var(--gradient);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;

@@ -5,7 +5,7 @@
 	"scripts": {
 		"build": "npx @11ty/eleventy",
 		"build-ghpages": "npx @11ty/eleventy --pathprefix=/treecasiano.github.io/",
-		"serve": "npx @11ty/eleventy --serve --watch",
+		"serve": "npx @11ty/eleventy --serve --watch --incremental",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"debug": "DEBUG=Eleventy* npx @11ty/eleventy",
 		"debugstart": "DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",

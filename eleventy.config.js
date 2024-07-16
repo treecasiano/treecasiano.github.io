@@ -21,6 +21,7 @@ module.exports = function (eleventyConfig) {
 	// Run Eleventy when these files change:
 	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-
 	eleventyConfig.addWatchTarget("./public/**/*/*.css");
+	eleventyConfig.addWatchTarget("./public/");
 	eleventyConfig.addWatchTarget("./src/**/*/*.css");
 
 	// Watch content images for the image pipeline.
