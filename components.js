@@ -3,61 +3,69 @@ class HeaderComponent extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.innerHTML = `
-            <style>
-                :host {
-                    display: block;
-                }
-                nav {
-                    display: flex;
-                    justify-content: flex-end;
-                    gap: 2rem;
-                    max-width: 1200px;
-                    margin: 0 auto;
-                }
-                a {
-                    color: var(--light-text);
-                    text-decoration: none;
-                    padding: 0.5rem 1rem;
-                    border-radius: 4px;
-                    transition: all 0.3s ease;
-                    position: relative;
-                    font-weight: 500;
-                }
-                a::after {
-                    content: '';
-                    position: absolute;
-                    bottom: 0;
-                    left: 50%;
-                    width: 0;
-                    height: 2px;
-                    background-color: var(--light-text);
-                    transition: all 0.3s ease;
-                    transform: translateX(-50%);
-                }
-                a:hover::after,
-                a:focus::after {
-                    width: 100%;
-                }
-                a:focus {
-                    outline: 2px solid var(--light-text);
-                    outline-offset: 2px;
-                }
-                a.active {
-                    background-color: var(--secondary-color);
-                    outline: none;
-                }
-                a.active::after {
-                    width: 100%;
-                    background-color: var(--light-text);
-                    opacity: 1;
-                }
-            </style>
-            <nav>
-                <a href="#about" aria-label="About section">About</a>
-                <a href="#projects" aria-label="Projects section">Projects</a>
-                <a href="#contact" aria-label="Contact section">Contact</a>
-            </nav>
-        `;
+      <style>
+        :host {
+          display: block;
+          background: linear-gradient(90deg, var(--teal-color) 0%, var(--primary-color) 100%);
+          padding: 1rem 2rem;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 1000;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+          display: flex;
+          justify-content: flex-end;
+          gap: 2rem;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        a {
+          color: var(--light-text);
+          text-decoration: none;
+          padding: 0.5rem 1rem;
+          border-radius: 4px;
+          transition: all 0.3s ease;
+          position: relative;
+          font-weight: 500;
+        }
+        a::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0;
+          height: 2px;
+          background-color: var(--light-text);
+          transition: all 0.3s ease;
+          transform: translateX(-50%);
+        }
+        a:hover::after,
+        a:focus::after {
+          width: 100%;
+        }
+        a:focus {
+          outline: 2px solid var(--light-text);
+          outline-offset: 2px;
+        }
+        a.active {
+          background-color: rgba(255, 255, 255, 0.1);
+          outline: none;
+        }
+        a.active::after {
+          width: 100%;
+          background-color: var(--light-text);
+          opacity: 1;
+        }
+      </style>
+      <nav>
+        <a href="#about" aria-label="About section">About</a>
+        <a href="#projects" aria-label="Projects section">Projects</a>
+        <a href="#contact" aria-label="Contact section">Contact</a>
+      </nav>
+    `;
 
     // Set up Intersection Observer
     const options = {
@@ -379,19 +387,38 @@ class ContactComponent extends HTMLElement {
           color: var(--primary-color);
           text-decoration: none;
           padding: 1rem;
-          border: 2px solid var(--accent-color);
+          border: 2px solid transparent;
           border-radius: 8px;
           transition: all 0.3s ease;
+          position: relative;
+          background: white;
+        }
+        .contact-link::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          border-radius: 8px;
+          padding: 2px;
+          background: linear-gradient(90deg, var(--teal-color) 0%, var(--primary-color) 100%);
+          -webkit-mask: 
+            linear-gradient(#fff 0 0) content-box, 
+            linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
         }
         .contact-link:hover {
-          background-color: var(--accent-color);
+          background: linear-gradient(90deg, var(--teal-color) 0%, var(--primary-color) 100%);
           color: var(--light-text);
           transform: translateX(10px);
+        }
+        .contact-link:hover svg {
+          fill: var(--light-text);
         }
         .contact-link svg {
           width: 24px;
           height: 24px;
-          fill: currentColor;
+          fill: var(--primary-color);
+          transition: fill 0.3s ease;
         }
       </style>
       <div class="contact-container">
