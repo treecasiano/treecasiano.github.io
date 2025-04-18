@@ -31,3 +31,8 @@ A modern, single-page portfolio website built using native web components and va
 ## License
 
 MIT License
+
+** TODO:
+
+- [] Add real contact info and resumé content
+- [] Refactor components file
