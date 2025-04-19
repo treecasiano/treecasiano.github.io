@@ -36,3 +36,8 @@ MIT License
 
 - [] Add real contact info and resumé content
 - [] Refactor components file to dry out the CSS
+- [] Add background that looks like a topo map
+- [] Fine-tune styles
+- [] QA layout on phone and adjust responsiveness as needed
+- [] Test accessibility
+- [] Update site with more recent projects
