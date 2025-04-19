@@ -35,4 +35,4 @@ MIT License
 ** TODO:
 
 - [] Add real contact info and resumé content
-- [] Refactor components file
+- [] Refactor components file to dry out the CSS
