@@ -167,11 +167,6 @@ class AboutComponent extends HTMLElement {
         :host {
           display: block;
           padding: 4rem 2rem;
-          background-color: var(--background-color);
-        }
-        .about-container {
-          max-width: 800px;
-          margin: 0 auto;
         }
         .section-header {
           margin-bottom: 3rem;
