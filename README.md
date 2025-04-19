@@ -32,12 +32,19 @@ A modern, single-page portfolio website built using native web components and va
 
 MIT License
 
-** TODO:
+## TODO:
 
-- [] Add real contact info and resumé content
-- [] Refactor components file to dry out the CSS
-- [] Add background that looks like a topo map
-- [] Fine-tune styles
-- [] QA layout on phone and adjust responsiveness as needed
-- [] Test accessibility
-- [] Update site with more recent projects
+- Add real contact info and resumé content
+
+- Refactor components file to dry out the CSS
+
+- Add background that looks like a topo map
+
+- Fine-tune styles
+
+- QA layout on phone and adjust responsiveness as needed
+
+- Test accessibility
+
+- Update site with more recent projects
+
