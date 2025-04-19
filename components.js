@@ -15,12 +15,27 @@ class HeaderComponent extends HTMLElement {
           z-index: 1000;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+        .header-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          max-width: 1600px;
+          margin: 0 auto;
+        }
+        .name {
+          color: var(--light-text);
+          font-size: 1.5rem;
+          font-weight: 600;
+          text-decoration: none;
+          transition: color 0.3s ease;
+        }
+        .name:hover {
+          color: var(--accent-color);
+        }
         nav {
           display: flex;
           justify-content: flex-end;
           gap: 2rem;
-          max-width: 1200px;
-          margin: 0 auto;
         }
         a {
           color: var(--light-text);
@@ -60,11 +75,14 @@ class HeaderComponent extends HTMLElement {
           opacity: 1;
         }
       </style>
-      <nav>
-        <a href="#about" aria-label="About section">About</a>
-        <a href="#projects" aria-label="Projects section">Projects</a>
-        <a href="#contact" aria-label="Contact section">Contact</a>
-      </nav>
+      <div class="header-content">
+        <a href="#" class="name">Tree Casiano</a>
+        <nav>
+          <a href="#about" aria-label="About section">About</a>
+          <a href="#projects" aria-label="Projects section">Projects</a>
+          <a href="#contact" aria-label="Contact section">Contact</a>
+        </nav>
+      </div>
     `;
 
     // Set up Intersection Observer
