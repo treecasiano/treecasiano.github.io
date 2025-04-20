@@ -230,7 +230,7 @@ class ProjectsComponent extends HTMLElement {
           margin: 0 auto;
         }
         .section-header {
-          margin-bottom: 3rem;
+          margin: 5rem 0 3rem 0;
         }
         .section-header h2 {
           color: var(--teal-color);
