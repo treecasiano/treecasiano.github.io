@@ -93,7 +93,6 @@ class HeaderComponent extends HTMLElement {
         const link = this.shadowRoot.querySelector(`nav a[href="#${id}"]`);
 
         if (entry.isIntersecting) {
-          // Remove active class from all nav links
           this.shadowRoot
             .querySelectorAll("nav a")
             .forEach((a) => a.classList.remove("active"));
@@ -539,7 +538,6 @@ class ContactComponent extends HTMLElement {
         .contact-link:hover {
           background: linear-gradient(90deg, var(--teal-color) 0%, var(--primary-color) 100%);
           color: var(--light-text);
-          transform: translateX(10px);
         }
         .contact-link:hover svg {
           fill: var(--light-text);
