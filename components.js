@@ -291,13 +291,13 @@ class ProjectsComponent extends HTMLElement {
         <h2>Featured Projects</h2>
       </div>
       <div class="projects-container">
-        <project-card repo-url="https://github.com/treecasiano/pdx-food-map">
+        <project-card repo-url="https://github.com/treecasiano/pdx-food-map" executive-summary-url="img/pdx_food_map_executive_summary.pdf">
           <span slot="title">PDX Food Map</span>
           <span slot="description">Interactive web map displaying food access indicators and sources of healthy food in the Portland Metro area, using data from the USDA Economic Research Service Food Access Research Atlas.</span>
           <span slot="tools">Leaflet, Vue.js, Vuetify, PostgreSQL, Node, Express</span>
           <img src="img/pdxmetrofoodmap.png" alt="PDX Food Map">
         </project-card>
-        <project-card repo-url="https://github.com/treecasiano/nitrate-cancer-analysis" project-url="https://treecasiano.github.io/nitrate-cancer-analysis/#/" executive-summary-url="img/pdx_food_map_executive_summary.pdf">
+        <project-card repo-url="https://github.com/treecasiano/nitrate-cancer-analysis" project-url="https://treecasiano.github.io/nitrate-cancer-analysis/#/">
           <span slot="title">Nitrate Levels and Cancer Incidence Analysis</span>
           <span slot="description">Interactive map exploring the relationship between nitrate levels and cancer analysis in Wisconsin census tracts.</span>
           <span slot="tools">Vue, Vuetify, Leaflet, Turf.js</span>
@@ -321,35 +321,37 @@ class ProjectCard extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>
         :host {
-          display: block;
           background-color: white;
           border-radius: 12px;
-          overflow: hidden;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+          display: block;
+          overflow: hidden;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         :host(:hover) {
-          transform: translateY(-4px);
           box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+          transform: translateY(-4px);
         }
         .card-content {
+          align-items: center;
           display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
           gap: 1.5rem;
           padding: 1.5rem;
-          align-items: center;
         }
         .text-content {
           flex: 1;
         }
         img {
-          width: auto;
-          height: 200px;
-          object-fit: contain;
-          object-position: center;
           border-radius: 8px;
-          display: block;
           border: 2px solid rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+          display: block;
+          max-height: 200px;
+          object-fit: contain;
+          object-position: center;
+          width: auto;
         }
         h3 {
           color: var(--teal-color);
@@ -413,7 +415,7 @@ class ProjectCard extends HTMLElement {
           <h3><slot name="title"></slot></h3>
           <p><slot name="description"></slot></p>
           <div class="tools">
-            <h4>Tools</h4>
+            <h4>Tools & Technology</h4>
             <p><slot name="tools"></slot></p>
             <div class="project-links">
               <a href="#" class="repo-link" target="_blank" rel="noopener noreferrer">
