@@ -88,6 +88,7 @@ class HeaderComponent extends HTMLElement {
         const link = this.shadowRoot.querySelector(`nav a[href="#${id}"]`);
 
         if (entry.isIntersecting) {
+          // Remove active class from all nav links
           this.shadowRoot
             .querySelectorAll("nav a")
             .forEach((a) => a.classList.remove("active"));
@@ -107,7 +108,7 @@ class HeaderComponent extends HTMLElement {
     });
 
     // Handle click events to update active state immediately
-    this.shadowRoot.querySelectorAll("a").forEach((link) => {
+    this.shadowRoot.querySelectorAll("nav a").forEach((link) => {
       link.addEventListener("click", (e) => {
         e.preventDefault();
         const targetId = link.getAttribute("href").substring(1);
