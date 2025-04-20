@@ -78,9 +78,9 @@ class HeaderComponent extends HTMLElement {
       <div class="header-content">
         <a href="#" class="name">Tree Casiano</a>
         <nav>
-          <a href="#about" aria-label="About section">About</a>
-          <a href="#projects" aria-label="Projects section">Projects</a>
-          <a href="#contact" aria-label="Contact section">Contact</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </nav>
       </div>
     `;
@@ -103,6 +103,10 @@ class HeaderComponent extends HTMLElement {
             .forEach((a) => a.classList.remove("active"));
           // Add active class to current link
           link.classList.add("active");
+          // Update URL hash without scrolling
+          if (window.location.hash !== `#${id}`) {
+            history.replaceState(null, null, `#${id}`);
+          }
         }
       });
     }, options);
@@ -130,6 +134,28 @@ class HeaderComponent extends HTMLElement {
         targetSection.scrollIntoView({ behavior: "smooth" });
       });
     });
+
+    // Handle initial hash on page load
+    const handleInitialHash = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const targetSection = document.getElementById(hash.substring(1));
+        if (targetSection) {
+          const link = this.shadowRoot.querySelector(`a[href="${hash}"]`);
+          if (link) {
+            this.shadowRoot
+              .querySelectorAll("a")
+              .forEach((a) => a.classList.remove("active"));
+            link.classList.add("active");
+            targetSection.scrollIntoView();
+          }
+        }
+      }
+    };
+
+    // Handle initial hash and hash changes
+    handleInitialHash();
+    window.addEventListener("hashchange", handleInitialHash);
   }
 }
 
