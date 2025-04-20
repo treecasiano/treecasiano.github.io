@@ -5,15 +5,9 @@ class HeaderComponent extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>
         :host {
-          display: block;
           background: linear-gradient(90deg, var(--teal-color) 0%, var(--primary-color) 100%);
-          padding: 1rem 2rem;
           position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
           z-index: 1000;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .header-content {
           display: flex;
@@ -30,12 +24,13 @@ class HeaderComponent extends HTMLElement {
           transition: color 0.3s ease;
         }
         .name:hover {
-          color: var(--accent-color);
+          color: var(--accent-color-secondary);
         }
         nav {
           display: flex;
           justify-content: flex-end;
           gap: 2rem;
+          margin-bottom: -0.45rem;
         }
         a {
           color: var(--light-text);
@@ -53,7 +48,7 @@ class HeaderComponent extends HTMLElement {
           left: 50%;
           width: 0;
           height: 2px;
-          background-color: var(--light-text);
+          background: linear-gradient(90deg, var(--accent-color-secondary) 0%, var(--light-green) 100%);
           transition: all 0.3s ease;
           transform: translateX(-50%);
         }
@@ -67,10 +62,12 @@ class HeaderComponent extends HTMLElement {
         }
         a.active {
           background-color: rgba(255, 255, 255, 0.1);
+          position: relative;
+          z-index: 1;
         }
         a.active::after {
           width: 100%;
-          background-color: var(--light-text);
+          background: linear-gradient(90deg, var(--accent-color-secondary) 0%, var(--light-green) 100%);
           opacity: 1;
         }
       </style>
