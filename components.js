@@ -22,8 +22,8 @@ class HeaderComponent extends HTMLElement {
         }
         .name {
           color: var(--light-text);
-          font-size: 1.5rem;
-          font-weight: 600;
+          font-size: var(--font-size-xl);
+          font-weight: var(--font-weight-semibold);
           text-decoration: none;
           transition: color 0.3s ease;
         }
@@ -272,7 +272,7 @@ class ProjectsComponent extends HTMLElement {
           padding: var(--spacing-lg);
         }
         .section-header {
-          padding: 5rem 0 2rem 0;
+          padding: 3rem 0 1rem 0;
         }
         .section-header h2 {
           color: var(--teal-color);
@@ -283,15 +283,10 @@ class ProjectsComponent extends HTMLElement {
           display: flex;
           flex-direction: column;
           gap: 2rem;
-          max-width: 900px;
           margin: 0 auto;
-        }
-        @media (max-width: 600px) {
-          .section-header h2 {
-            font-size: 1.5rem; 
-            margin: 0 auto;
-    }
-}
+          max-width: 1000px;
+        }      
+      }
       </style>
       <div class="section-header">
         <h2>Featured Projects</h2>
@@ -496,11 +491,15 @@ class ContactComponent extends HTMLElement {
       <style>
         :host {
           display: block;
-          padding: 4rem 2rem;
           margin: 0 auto;
           max-width: 800px;
+          padding: 4rem 2rem;
         }
         .section-header {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
           margin-bottom: var(--spacing-lg);
         }
         .section-header h2 {
