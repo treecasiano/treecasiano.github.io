@@ -5,15 +5,9 @@ class HeaderComponent extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>
         :host {
-          display: block;
           background: linear-gradient(90deg, var(--teal-color) 0%, var(--primary-color) 100%);
-          padding: 1rem 2rem;
           position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
           z-index: 1000;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .header-content {
           display: flex;
@@ -30,12 +24,13 @@ class HeaderComponent extends HTMLElement {
           transition: color 0.3s ease;
         }
         .name:hover {
-          color: var(--accent-color);
+          color: var(--accent-color-secondary);
         }
         nav {
           display: flex;
           justify-content: flex-end;
           gap: 2rem;
+          margin-bottom: -0.45rem;
         }
         a {
           color: var(--light-text);
@@ -53,7 +48,7 @@ class HeaderComponent extends HTMLElement {
           left: 50%;
           width: 0;
           height: 2px;
-          background-color: var(--light-text);
+          background: linear-gradient(90deg, var(--accent-color-secondary) 0%, var(--light-green) 100%);
           transition: all 0.3s ease;
           transform: translateX(-50%);
         }
@@ -62,25 +57,21 @@ class HeaderComponent extends HTMLElement {
           width: 100%;
         }
         a:focus {
-          outline: 2px solid var(--light-text);
+          outline: 1px dotted var(--light-text);
           outline-offset: 2px;
-        }
-        a.active {
-          background-color: rgba(255, 255, 255, 0.1);
-          outline: none;
         }
         a.active::after {
           width: 100%;
-          background-color: var(--light-text);
+          background: linear-gradient(90deg, var(--accent-color-secondary) 0%, var(--light-green) 100%);
           opacity: 1;
         }
       </style>
       <div class="header-content">
-        <a href="#" class="name">Tree Casiano</a>
+        <a href="#about" class="name">Tree Casiano</a>
         <nav>
-          <a href="#about" aria-label="About section">About</a>
-          <a href="#projects" aria-label="Projects section">Projects</a>
-          <a href="#contact" aria-label="Contact section">Contact</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </nav>
       </div>
     `;
@@ -94,15 +85,19 @@ class HeaderComponent extends HTMLElement {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const id = entry.target.getAttribute("id");
-        const link = this.shadowRoot.querySelector(`a[href="#${id}"]`);
+        const link = this.shadowRoot.querySelector(`nav a[href="#${id}"]`);
 
         if (entry.isIntersecting) {
-          // Remove active class from all links
+          // Remove active class from all nav links
           this.shadowRoot
-            .querySelectorAll("a")
+            .querySelectorAll("nav a")
             .forEach((a) => a.classList.remove("active"));
-          // Add active class to current link
+          // Add active class to current nav link
           link.classList.add("active");
+          // Update URL hash without scrolling
+          if (window.location.hash !== `#${id}`) {
+            history.pushState(null, null, `#${id}`);
+          }
         }
       });
     }, options);
@@ -113,23 +108,63 @@ class HeaderComponent extends HTMLElement {
     });
 
     // Handle click events to update active state immediately
-    this.shadowRoot.querySelectorAll("a").forEach((link) => {
+    this.shadowRoot.querySelectorAll("nav a").forEach((link) => {
       link.addEventListener("click", (e) => {
         e.preventDefault();
         const targetId = link.getAttribute("href").substring(1);
         const targetSection = document.getElementById(targetId);
 
-        // Remove active class from all links
-        this.shadowRoot
-          .querySelectorAll("a")
-          .forEach((a) => a.classList.remove("active"));
-        // Add active class to clicked link
-        link.classList.add("active");
+        if (link.closest("nav")) {
+          // Only update active state for nav links
+          this.shadowRoot
+            .querySelectorAll("nav a")
+            .forEach((a) => a.classList.remove("active"));
+          link.classList.add("active");
+        }
 
-        // Smooth scroll to section
+        // Update URL hash and scroll to section
+        history.pushState(null, null, `#${targetId}`);
         targetSection.scrollIntoView({ behavior: "smooth" });
       });
     });
+
+    // Handle initial hash on page load
+    const handleInitialHash = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const targetSection = document.getElementById(hash.substring(1));
+        if (targetSection) {
+          const link = this.shadowRoot.querySelector(`nav a[href="${hash}"]`);
+          if (link) {
+            this.shadowRoot
+              .querySelectorAll("nav a")
+              .forEach((a) => a.classList.remove("active"));
+            link.classList.add("active");
+            targetSection.scrollIntoView({ behavior: "instant" });
+          }
+        }
+      } else if (!window.location.hash) {
+        // If no hash is present, redirect to #about
+        history.replaceState(null, null, "#about");
+        const aboutSection = document.getElementById("about");
+        const aboutLink = this.shadowRoot.querySelector('nav a[href="#about"]');
+        if (aboutSection && aboutLink) {
+          this.shadowRoot
+            .querySelectorAll("nav a")
+            .forEach((a) => a.classList.remove("active"));
+          aboutLink.classList.add("active");
+          aboutSection.scrollIntoView({ behavior: "instant" });
+        }
+      }
+    };
+
+    // Handle initial hash and hash changes
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", handleInitialHash);
+    } else {
+      handleInitialHash();
+    }
+    window.addEventListener("hashchange", handleInitialHash);
   }
 }
 
@@ -157,6 +192,7 @@ class ScrollArrowComponent extends HTMLElement {
           border-width: 2px 2px 0 0;
           transform: rotate(135deg);
         }
+
       </style>
       <div class="scroll-arrow">
         <div class="arrow"></div>
@@ -191,13 +227,13 @@ class AboutComponent extends HTMLElement {
         }
         .section-header h1 {
           color: var(--teal-color);
-          font-size: 2rem;
-          font-weight: 600;
-          margin-bottom: 1rem;
+          font-size: var(--font-size-xl);
+          font-weight: var(--font-weight-semibold);
+          margin-bottom: var(--spacing-md);
         }
         p {
           color: var(--text-color);
-          font-size: 1.1rem;
+          font-size: var(--font-size-body-lg);
           line-height: 1.6;
           margin-bottom: 1.5rem;
         }
@@ -206,8 +242,8 @@ class AboutComponent extends HTMLElement {
         <div class="section-header">
           <h1>Tree Casiano, GIS Developer</h1>
         </div>
-        <p>Greetings! I'm a full stack developer specializing in geospatial applications. I build accessible, intuitive web interfaces that make complex spatial data accessible and actionable.</p>
-        <p>My work focuses on interactive maps, spatial analysis tools, and custom GIS applications that tell compelling stories with data through thoughtful visualization and user experience.</p>
+        <p>Greetings! I'm a full stack developer specializing in interactive maps and data visualization. I build accessible, intuitive web interfaces that make complex spatial data meaningful and actionable.</p>
+        <p>I enjoy working across the stack - from crafting pixel-perfect UIs to optimizing database queries. I'm especially interested in web cartography, web accessibility, information visualization, and data literacy.</p>
         <scroll-arrow next-section="#projects"></scroll-arrow>
       </div>
     `;
@@ -223,52 +259,56 @@ class ProjectsComponent extends HTMLElement {
         :host {
           display: block;
           padding: 4rem 2rem;
-          background-color: var(--background-color);
-        }
-        .projects-container {
-          max-width: 800px;
-          margin: 0 auto;
         }
         .section-header {
           margin-bottom: 3rem;
         }
         .section-header h2 {
           color: var(--teal-color);
-          font-size: 2rem;
-          font-weight: 600;
-          margin-bottom: 1rem;
+          font-size: var(--font-size-xl);
+          font-weight: var(--font-weight-semibold);
+          margin-bottom: var(--spacing-md);
         }
-        .projects-grid {
+        .projects-container {
           display: flex;
           flex-direction: column;
           gap: 2rem;
-          width: 100%;
+          max-width: 900px;
+          margin: 0 auto;
+        }
+        .project-card {
+          background: white;
+          border-radius: 12px;
+          padding: 1.5rem;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+          transform: translateY(-5px);
         }
       </style>
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+      </div>
       <div class="projects-container">
-        <div class="section-header">
-          <h2>Featured Projects</h2>
-        </div>
-        <div class="projects-grid">
-          <project-card repo-url="https://github.com/treecasiano/pdx-food-map">
-            <span slot="title">PDX Food Map</span>
-            <span slot="description">Interactive web map displaying food access indicators and sources of healthy food in the Portland Metro area, using data from the USDA Economic Research Service Food Access Research Atlas.</span>
-            <span slot="tools">Leaflet, Vue.js, Vuetify, PostgreSQL, Node, Express</span>
-            <img src="img/pdxmetrofoodmap.png" alt="PDX Food Map">
-          </project-card>
-          <project-card repo-url="https://github.com/treecasiano/nitrate-cancer-analysis" project-url="https://treecasiano.github.io/nitrate-cancer-analysis/#/">
-            <span slot="title">Nitrate Levels and Cancer Incidence Analysis</span>
-            <span slot="description">Interactive map exploring the relationship between nitrate levels and cancer analysis in Wisconsin census tracts.</span>
-            <span slot="tools">Vue, Vuetify, Leaflet, Turf.js</span>
-            <img src="img/nitrate-analysis.png" alt="Nitrate-Cancer Analysis">
-          </project-card>
-          <project-card repo-url="https://github.com/uw-project-group/portland-street-trees">
-            <span slot="title">Portland Street Trees</span>
-            <span slot="description">Interactive map visualizing Portland Parks & Recreation's Street Tree Inventory data.</span>
-            <span slot="tools">Leaflet, D3</span>
-            <img src="img/street-trees-map.png" alt="Portland Street Trees">
-          </project-card>
-        </div>
+        <project-card repo-url="https://github.com/treecasiano/pdx-food-map">
+          <span slot="title">PDX Food Map</span>
+          <span slot="description">Interactive web map displaying food access indicators and sources of healthy food in the Portland Metro area, using data from the USDA Economic Research Service Food Access Research Atlas.</span>
+          <span slot="tools">Leaflet, Vue.js, Vuetify, PostgreSQL, Node, Express</span>
+          <img src="img/pdxmetrofoodmap.png" alt="PDX Food Map">
+        </project-card>
+        <project-card repo-url="https://github.com/treecasiano/nitrate-cancer-analysis" project-url="https://treecasiano.github.io/nitrate-cancer-analysis/#/">
+          <span slot="title">Nitrate Levels and Cancer Incidence Analysis</span>
+          <span slot="description">Interactive map exploring the relationship between nitrate levels and cancer analysis in Wisconsin census tracts.</span>
+          <span slot="tools">Vue, Vuetify, Leaflet, Turf.js</span>
+          <img src="img/nitrate-analysis.png" alt="Nitrate-Cancer Analysis">
+        </project-card>
+        <project-card repo-url="https://github.com/uw-project-group/portland-street-trees">
+          <span slot="title">Portland Street Trees</span>
+          <span slot="description">Interactive map visualizing Portland Parks & Recreation's Street Tree Inventory data.</span>
+          <span slot="tools">Leaflet, D3</span>
+          <img src="img/street-trees-map.png" alt="Portland Street Trees">
+        </project-card>
       </div>
     `;
   }
@@ -296,17 +336,20 @@ class ProjectCard extends HTMLElement {
           display: flex;
           gap: 1.5rem;
           padding: 1.5rem;
+          align-items: center;
         }
         .text-content {
           flex: 1;
         }
         img {
-          width: 100px;
-          height: 100px;
-          object-fit: cover;
+          width: auto;
+          height: 200px;
+          object-fit: contain;
           object-position: center;
           border-radius: 8px;
-          flex-shrink: 0;
+          display: block;
+          border: 2px solid rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
         h3 {
           color: var(--teal-color);
@@ -398,6 +441,8 @@ class ProjectCard extends HTMLElement {
     if (imgSrc) {
       img.src = imgSrc;
       img.alt = this.querySelector("img")?.alt || "";
+      img.style.height = "200px";
+      img.style.width = "auto";
     }
 
     // Set up the repository link
@@ -438,9 +483,10 @@ class ContactComponent extends HTMLElement {
         }
         .section-header h2 {
           color: var(--teal-color);
-          font-size: 2rem;
-          font-weight: 600;
-          margin-bottom: 1rem;
+          font-size: var(--font-size-xl);
+          font-weight: var(--font-weight-semibold);
+          letter-spacing: 0.5px;
+          margin-bottom: var(--spacing-md);
         }
         .contact-links {
           display: flex;
@@ -448,25 +494,25 @@ class ContactComponent extends HTMLElement {
           gap: 1.5rem;
         }
         .contact-link {
-          display: flex;
           align-items: center;
-          gap: 1rem;
-          color: var(--primary-color);
-          text-decoration: none;
-          padding: 1rem;
-          border: 2px solid transparent;
-          border-radius: 8px;
-          transition: all 0.3s ease;
-          position: relative;
           background: white;
+          border-radius: 8px;
+          border: 2px solid transparent;
+          color: var(--primary-color);
+          display: flex;
+          gap: 1rem;
+          padding: 1rem;
+          position: relative;
+          text-decoration: none;
+          transition: all 0.3s ease;
         }
         .contact-link::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          border-radius: 8px;
-          padding: 2px;
           background: linear-gradient(90deg, var(--teal-color) 0%, var(--primary-color) 100%);
+          border-radius: 8px;
+          content: '';
+          inset: 0;
+          padding: 2px;
+          position: absolute;
           -webkit-mask: 
             linear-gradient(#fff 0 0) content-box, 
             linear-gradient(#fff 0 0);
@@ -476,16 +522,15 @@ class ContactComponent extends HTMLElement {
         .contact-link:hover {
           background: linear-gradient(90deg, var(--teal-color) 0%, var(--primary-color) 100%);
           color: var(--light-text);
-          transform: translateX(10px);
         }
         .contact-link:hover svg {
           fill: var(--light-text);
         }
         .contact-link svg {
-          width: 24px;
-          height: 24px;
           fill: var(--primary-color);
+          height: 24px;
           transition: fill 0.3s ease;
+          width: 24px;
         }
       </style>
       <div class="contact-container">
