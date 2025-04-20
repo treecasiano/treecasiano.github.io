@@ -297,7 +297,7 @@ class ProjectsComponent extends HTMLElement {
           <span slot="tools">Leaflet, Vue.js, Vuetify, PostgreSQL, Node, Express</span>
           <img src="img/pdxmetrofoodmap.png" alt="PDX Food Map">
         </project-card>
-        <project-card repo-url="https://github.com/treecasiano/nitrate-cancer-analysis" project-url="https://treecasiano.github.io/nitrate-cancer-analysis/#/">
+        <project-card repo-url="https://github.com/treecasiano/nitrate-cancer-analysis" project-url="https://treecasiano.github.io/nitrate-cancer-analysis/#/" executive-summary-url="img/pdx_food_map_executive_summary.pdf">
           <span slot="title">Nitrate Levels and Cancer Incidence Analysis</span>
           <span slot="description">Interactive map exploring the relationship between nitrate levels and cancer analysis in Wisconsin census tracts.</span>
           <span slot="tools">Vue, Vuetify, Leaflet, Turf.js</span>
@@ -383,7 +383,7 @@ class ProjectCard extends HTMLElement {
           margin: 0 0 0.5rem 0;
           opacity: 0.8;
         }
-        .repo-link, .project-link {
+        .repo-link, .project-link, .executive-summary-link {
           color: var(--teal-color);
           text-decoration: none;
           font-size: 0.85rem;
@@ -393,11 +393,11 @@ class ProjectCard extends HTMLElement {
           transition: color 0.3s ease;
           margin-right: 1rem;
         }
-        .repo-link:hover, .project-link:hover {
+        .repo-link:hover, .project-link:hover, .executive-summary-link:hover {
           color: var(--primary-color);
           text-decoration: underline;
         }
-        .repo-link svg, .project-link svg {
+        .repo-link svg, .project-link svg, .executive-summary-link svg {
           width: 14px;
           height: 14px;
           fill: currentColor;
@@ -427,6 +427,12 @@ class ProjectCard extends HTMLElement {
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                 </svg>
                 Go to Project
+              </a>
+              <a href="#" class="executive-summary-link" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24">
+                <path d="M6 2h9l5 5v13c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2zm7 7V3.5L18.5 9H13zm-7 2h10v2H6v-2zm0 4h10v2H6v-2zm0 4h7v2H6v-2z"/>
+              </svg>
+                Executive Summary
               </a>
             </div>
           </div>
@@ -459,6 +465,17 @@ class ProjectCard extends HTMLElement {
       projectLink.href = projectUrl;
     } else {
       projectLink.style.display = "none";
+    }
+
+    //Set up executive summary link
+    const executiveSummaryLink = this.shadowRoot.querySelector(
+      ".executive-summary-link"
+    );
+    const executiveSummaryUrl = this.getAttribute("executive-summary-url");
+    if (executiveSummaryUrl) {
+      executiveSummaryLink.href = executiveSummaryUrl;
+    } else {
+      executiveSummaryLink.style.display = "none";
     }
   }
 }
