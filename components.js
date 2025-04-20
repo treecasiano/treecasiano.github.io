@@ -275,14 +275,9 @@ class ProjectsComponent extends HTMLElement {
         :host {
           display: block;
           padding: 4rem 2rem;
-          background-color: var(--background-color);
-        }
-        .projects-container {
-          max-width: 800px;
-          margin: 0 auto;
         }
         .section-header {
-          margin: 5rem 0 3rem 0;
+          margin-bottom: 3rem;
         }
         .section-header h2 {
           color: var(--teal-color);
@@ -290,37 +285,46 @@ class ProjectsComponent extends HTMLElement {
           font-weight: var(--font-weight-semibold);
           margin-bottom: var(--spacing-md);
         }
-        .projects-grid {
+        .projects-container {
           display: flex;
           flex-direction: column;
           gap: 2rem;
-          width: 100%;
+          max-width: 900px;
+          margin: 0 auto;
+        }
+        .project-card {
+          background: white;
+          border-radius: 12px;
+          padding: 1.5rem;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+          transform: translateY(-5px);
         }
       </style>
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+      </div>
       <div class="projects-container">
-        <div class="section-header">
-          <h2>Featured Projects</h2>
-        </div>
-        <div class="projects-grid">
-          <project-card repo-url="https://github.com/treecasiano/pdx-food-map">
-            <span slot="title">PDX Food Map</span>
-            <span slot="description">Interactive web map displaying food access indicators and sources of healthy food in the Portland Metro area, using data from the USDA Economic Research Service Food Access Research Atlas.</span>
-            <span slot="tools">Leaflet, Vue.js, Vuetify, PostgreSQL, Node, Express</span>
-            <img src="img/pdxmetrofoodmap.png" alt="PDX Food Map">
-          </project-card>
-          <project-card repo-url="https://github.com/treecasiano/nitrate-cancer-analysis" project-url="https://treecasiano.github.io/nitrate-cancer-analysis/#/">
-            <span slot="title">Nitrate Levels and Cancer Incidence Analysis</span>
-            <span slot="description">Interactive map exploring the relationship between nitrate levels and cancer analysis in Wisconsin census tracts.</span>
-            <span slot="tools">Vue, Vuetify, Leaflet, Turf.js</span>
-            <img src="img/nitrate-analysis.png" alt="Nitrate-Cancer Analysis">
-          </project-card>
-          <project-card repo-url="https://github.com/uw-project-group/portland-street-trees">
-            <span slot="title">Portland Street Trees</span>
-            <span slot="description">Interactive map visualizing Portland Parks & Recreation's Street Tree Inventory data.</span>
-            <span slot="tools">Leaflet, D3</span>
-            <img src="img/street-trees-map.png" alt="Portland Street Trees">
-          </project-card>
-        </div>
+        <project-card repo-url="https://github.com/treecasiano/pdx-food-map">
+          <span slot="title">PDX Food Map</span>
+          <span slot="description">Interactive web map displaying food access indicators and sources of healthy food in the Portland Metro area, using data from the USDA Economic Research Service Food Access Research Atlas.</span>
+          <span slot="tools">Leaflet, Vue.js, Vuetify, PostgreSQL, Node, Express</span>
+          <img src="img/pdxmetrofoodmap.png" alt="PDX Food Map">
+        </project-card>
+        <project-card repo-url="https://github.com/treecasiano/nitrate-cancer-analysis" project-url="https://treecasiano.github.io/nitrate-cancer-analysis/#/">
+          <span slot="title">Nitrate Levels and Cancer Incidence Analysis</span>
+          <span slot="description">Interactive map exploring the relationship between nitrate levels and cancer analysis in Wisconsin census tracts.</span>
+          <span slot="tools">Vue, Vuetify, Leaflet, Turf.js</span>
+          <img src="img/nitrate-analysis.png" alt="Nitrate-Cancer Analysis">
+        </project-card>
+        <project-card repo-url="https://github.com/uw-project-group/portland-street-trees">
+          <span slot="title">Portland Street Trees</span>
+          <span slot="description">Interactive map visualizing Portland Parks & Recreation's Street Tree Inventory data.</span>
+          <span slot="tools">Leaflet, D3</span>
+          <img src="img/street-trees-map.png" alt="Portland Street Trees">
+        </project-card>
       </div>
     `;
   }
@@ -348,17 +352,20 @@ class ProjectCard extends HTMLElement {
           display: flex;
           gap: 1.5rem;
           padding: 1.5rem;
+          align-items: center;
         }
         .text-content {
           flex: 1;
         }
         img {
-          width: 100px;
-          height: 100px;
-          object-fit: cover;
+          width: auto;
+          height: 200px;
+          object-fit: contain;
           object-position: center;
           border-radius: 8px;
-          flex-shrink: 0;
+          display: block;
+          border: 2px solid rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
         h3 {
           color: var(--teal-color);
@@ -450,6 +457,9 @@ class ProjectCard extends HTMLElement {
     if (imgSrc) {
       img.src = imgSrc;
       img.alt = this.querySelector("img")?.alt || "";
+      // Force image to load at full size
+      img.style.height = "200px";
+      img.style.width = "auto";
     }
 
     // Set up the repository link
