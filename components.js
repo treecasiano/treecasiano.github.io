@@ -269,10 +269,10 @@ class ProjectsComponent extends HTMLElement {
         :host {
           display: block;
           margin: 0 auto;
-          padding: 0 2rem;
+          padding: var(--spacing-lg);
         }
         .section-header {
-          padding: 4rem 0 2rem 0;
+          padding: 5rem 0 2rem 0;
         }
         .section-header h2 {
           color: var(--teal-color);
