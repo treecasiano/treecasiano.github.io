@@ -237,6 +237,9 @@ class AboutComponent extends HTMLElement {
           font-weight: var(--font-weight-semibold);
           margin-bottom: var(--spacing-md);
         }
+        .section-header h1 span {
+          display: block;
+        }
         p {
           color: var(--text-color);
           font-size: var(--font-size-body-lg);
@@ -246,7 +249,8 @@ class AboutComponent extends HTMLElement {
       </style>
       <div class="about-container">
         <div class="section-header">
-          <h1>Tree Casiano, GIS Developer</h1>
+          <h1>Tree Casiano <span>GIS Developer</span>
+          </h1>
         </div>
         <p>Greetings! I'm a full stack developer specializing in interactive maps and data visualization. I build accessible, intuitive web interfaces that make complex spatial data meaningful and actionable.</p>
         <p>I enjoy working across the stack - from crafting pixel-perfect UIs to optimizing database queries. I'm especially interested in web cartography, web accessibility, information visualization, and data literacy.</p>
@@ -265,16 +269,15 @@ class ProjectsComponent extends HTMLElement {
         :host {
           display: block;
           margin: 0 auto;
+          padding: 0 2rem;
         }
         .section-header {
-          margin-bottom: var(--spacing-xxl);
-          padding-top: var(--spacing-xxl);
+          padding: 4rem 0 2rem 0;
         }
         .section-header h2 {
           color: var(--teal-color);
           font-size: var(--font-size-xl);
           font-weight: var(--font-weight-semibold);
-          margin-bottom: var(--spacing-md);
         }
         .projects-container {
           display: flex;
@@ -283,16 +286,12 @@ class ProjectsComponent extends HTMLElement {
           max-width: 900px;
           margin: 0 auto;
         }
-        .project-card {
-          background: white;
-          border-radius: 12px;
-          padding: 1.5rem;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease;
-        }
-        .project-card:hover {
-          transform: translateY(-5px);
-        }
+        @media (max-width: 600px) {
+          .section-header h2 {
+            font-size: 1.5rem; 
+            margin: 0 auto;
+    }
+}
       </style>
       <div class="section-header">
         <h2>Featured Projects</h2>
@@ -498,14 +497,11 @@ class ContactComponent extends HTMLElement {
         :host {
           display: block;
           padding: 4rem 2rem;
-          background-color: var(--background-color);
-        }
-        .contact-container {
-          max-width: 800px;
           margin: 0 auto;
+          max-width: 800px;
         }
         .section-header {
-          margin-bottom: 3rem;
+          margin-bottom: var(--spacing-lg);
         }
         .section-header h2 {
           color: var(--teal-color);
