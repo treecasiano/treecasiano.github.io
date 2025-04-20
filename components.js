@@ -5,16 +5,20 @@ class HeaderComponent extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>
         :host {
-          background: linear-gradient(90deg, var(--teal-color) 0%, var(--primary-color) 100%);
+          background: var(--gradient-primary);
+          padding: var(--spacing-xs);
           position: fixed;
+          width: 100%;
           z-index: 1000;
         }
         .header-content {
-          display: flex;
-          justify-content: space-between;
           align-items: center;
-          max-width: 1600px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
           margin: 0 auto;
+          max-width: 1600px;
+          padding-bottom: var(--spacing-sm);
         }
         .name {
           color: var(--light-text);
@@ -33,13 +37,12 @@ class HeaderComponent extends HTMLElement {
           margin-bottom: -0.45rem;
         }
         a {
-          color: var(--light-text);
-          text-decoration: none;
-          padding: 0.5rem 1rem;
           border-radius: 4px;
-          transition: all 0.3s ease;
+          color: var(--light-text);
+          padding: 0.5rem 1rem;
           position: relative;
-          font-weight: 500;
+          text-decoration: none;
+          transition: all 0.3s ease;
         }
         a::after {
           content: '';
@@ -220,10 +223,13 @@ class AboutComponent extends HTMLElement {
       <style>
         :host {
           display: block;
+          max-width: 800px;
+          margin: 0 auto;
           padding: 4rem 2rem;
+          text-align: center;
         }
         .section-header {
-          margin-bottom: 3rem;
+          margin-bottom: var(--spacing-lg);
         }
         .section-header h1 {
           color: var(--teal-color);
@@ -258,10 +264,11 @@ class ProjectsComponent extends HTMLElement {
       <style>
         :host {
           display: block;
-          padding: 4rem 2rem;
+          margin: 0 auto;
         }
         .section-header {
-          margin-bottom: 3rem;
+          margin-bottom: var(--spacing-xxl);
+          padding-top: var(--spacing-xxl);
         }
         .section-header h2 {
           color: var(--teal-color);
@@ -356,7 +363,7 @@ class ProjectCard extends HTMLElement {
         h3 {
           color: var(--teal-color);
           font-size: 1.25rem;
-          font-weight: 600;
+          font-weight: var(--font-weight-semibold);
           margin: 0 0 1rem 0;
         }
         p {
@@ -367,9 +374,9 @@ class ProjectCard extends HTMLElement {
         }
         .tools {
           background-color: #F8F8F8;
-          padding: 1rem;
           border-radius: 8px;
           margin-top: 1rem;
+          padding: 1rem;
         }
         .tools h4 {
           color: var(--teal-color);
@@ -381,28 +388,28 @@ class ProjectCard extends HTMLElement {
         }
         .tools p {
           color: var(--text-color);
-          font-size: 0.85rem;
+          font-size: var(--font-size-sm);
           margin: 0 0 0.5rem 0;
           opacity: 0.8;
         }
         .repo-link, .project-link, .executive-summary-link {
-          color: var(--teal-color);
-          text-decoration: none;
-          font-size: 0.85rem;
-          display: inline-flex;
           align-items: center;
+          color: var(--teal-color);
+          display: inline-flex;
+          font-size: var(--font-size-sm);
           gap: 0.25rem;
-          transition: color 0.3s ease;
           margin-right: 1rem;
+          text-decoration: none;
+          transition: color 0.3s ease;
         }
         .repo-link:hover, .project-link:hover, .executive-summary-link:hover {
           color: var(--primary-color);
           text-decoration: underline;
         }
         .repo-link svg, .project-link svg, .executive-summary-link svg {
-          width: 14px;
-          height: 14px;
           fill: currentColor;
+          height: 14px;
+          width: 14px;
         }
         .project-links {
           display: flex;
