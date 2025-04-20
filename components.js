@@ -62,12 +62,11 @@ class HeaderComponent extends HTMLElement {
           width: 100%;
         }
         a:focus {
-          outline: 2px solid var(--light-text);
+          outline: 1px dotted var(--light-text);
           outline-offset: 2px;
         }
         a.active {
           background-color: rgba(255, 255, 255, 0.1);
-          outline: none;
         }
         a.active::after {
           width: 100%;
@@ -76,7 +75,7 @@ class HeaderComponent extends HTMLElement {
         }
       </style>
       <div class="header-content">
-        <a href="#" class="name">Tree Casiano</a>
+        <a href="#about" class="name">Tree Casiano</a>
         <nav>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
@@ -94,15 +93,19 @@ class HeaderComponent extends HTMLElement {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const id = entry.target.getAttribute("id");
-        const link = this.shadowRoot.querySelector(`a[href="#${id}"]`);
+        const link = this.shadowRoot.querySelector(`nav a[href="#${id}"]`);
 
         if (entry.isIntersecting) {
-          // Remove active class from all links
+          // Remove active class from all nav links
           this.shadowRoot
-            .querySelectorAll("a")
+            .querySelectorAll("nav a")
             .forEach((a) => a.classList.remove("active"));
-          // Add active class to current link
+          // Add active class to current nav link
           link.classList.add("active");
+          // Update URL hash without scrolling
+          if (window.location.hash !== `#${id}`) {
+            history.replaceState(null, null, `#${id}`);
+          }
         }
       });
     }, options);
@@ -119,12 +122,13 @@ class HeaderComponent extends HTMLElement {
         const targetId = link.getAttribute("href").substring(1);
         const targetSection = document.getElementById(targetId);
 
-        // Remove active class from all links
-        this.shadowRoot
-          .querySelectorAll("a")
-          .forEach((a) => a.classList.remove("active"));
-        // Add active class to clicked link
-        link.classList.add("active");
+        if (link.closest("nav")) {
+          // Only update active state for nav links
+          this.shadowRoot
+            .querySelectorAll("nav a")
+            .forEach((a) => a.classList.remove("active"));
+          link.classList.add("active");
+        }
 
         // Update URL hash and scroll to section
         history.pushState(null, null, `#${targetId}`);
@@ -138,27 +142,38 @@ class HeaderComponent extends HTMLElement {
       if (hash) {
         const targetSection = document.getElementById(hash.substring(1));
         if (targetSection) {
-          const link = this.shadowRoot.querySelector(`a[href="${hash}"]`);
+          const link = this.shadowRoot.querySelector(`nav a[href="${hash}"]`);
           if (link) {
             this.shadowRoot
-              .querySelectorAll("a")
+              .querySelectorAll("nav a")
               .forEach((a) => a.classList.remove("active"));
             link.classList.add("active");
-            // Scroll to section immediately without animation
-            targetSection.scrollIntoView({ behavior: "instant" });
+            // Scroll to the h1 within the section
+            const heading = targetSection.querySelector("h1");
+            if (heading) {
+              heading.scrollIntoView({ behavior: "instant" });
+            } else {
+              targetSection.scrollIntoView({ behavior: "instant" });
+            }
           }
         }
       } else if (!window.location.hash) {
         // If no hash is present, redirect to #about
         history.replaceState(null, null, "#about");
         const aboutSection = document.getElementById("about");
-        const aboutLink = this.shadowRoot.querySelector('a[href="#about"]');
+        const aboutLink = this.shadowRoot.querySelector('nav a[href="#about"]');
         if (aboutSection && aboutLink) {
           this.shadowRoot
-            .querySelectorAll("a")
+            .querySelectorAll("nav a")
             .forEach((a) => a.classList.remove("active"));
           aboutLink.classList.add("active");
-          aboutSection.scrollIntoView({ behavior: "instant" });
+          // Scroll to the h1 within the about section
+          const heading = aboutSection.querySelector("h1");
+          if (heading) {
+            heading.scrollIntoView({ behavior: "instant" });
+          } else {
+            aboutSection.scrollIntoView({ behavior: "instant" });
+          }
         }
       }
     };
