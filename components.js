@@ -60,11 +60,6 @@ class HeaderComponent extends HTMLElement {
           outline: 1px dotted var(--light-text);
           outline-offset: 2px;
         }
-        a.active {
-          background-color: rgba(255, 255, 255, 0.1);
-          position: relative;
-          z-index: 1;
-        }
         a.active::after {
           width: 100%;
           background: linear-gradient(90deg, var(--accent-color-secondary) 0%, var(--light-green) 100%);
@@ -208,6 +203,7 @@ class ScrollArrowComponent extends HTMLElement {
           border-width: 2px 2px 0 0;
           transform: rotate(135deg);
         }
+
       </style>
       <div class="scroll-arrow">
         <div class="arrow"></div>
