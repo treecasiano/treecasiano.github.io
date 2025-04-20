@@ -96,7 +96,7 @@ class HeaderComponent extends HTMLElement {
           link.classList.add("active");
           // Update URL hash without scrolling
           if (window.location.hash !== `#${id}`) {
-            history.replaceState(null, null, `#${id}`);
+            history.pushState(null, null, `#${id}`);
           }
         }
       });
@@ -140,13 +140,7 @@ class HeaderComponent extends HTMLElement {
               .querySelectorAll("nav a")
               .forEach((a) => a.classList.remove("active"));
             link.classList.add("active");
-            // Scroll to the h1 within the section
-            const heading = targetSection.querySelector("h1");
-            if (heading) {
-              heading.scrollIntoView({ behavior: "instant" });
-            } else {
-              targetSection.scrollIntoView({ behavior: "instant" });
-            }
+            targetSection.scrollIntoView({ behavior: "instant" });
           }
         }
       } else if (!window.location.hash) {
@@ -159,13 +153,7 @@ class HeaderComponent extends HTMLElement {
             .querySelectorAll("nav a")
             .forEach((a) => a.classList.remove("active"));
           aboutLink.classList.add("active");
-          // Scroll to the h1 within the about section
-          const heading = aboutSection.querySelector("h1");
-          if (heading) {
-            heading.scrollIntoView({ behavior: "instant" });
-          } else {
-            aboutSection.scrollIntoView({ behavior: "instant" });
-          }
+          aboutSection.scrollIntoView({ behavior: "instant" });
         }
       }
     };
@@ -453,7 +441,6 @@ class ProjectCard extends HTMLElement {
     if (imgSrc) {
       img.src = imgSrc;
       img.alt = this.querySelector("img")?.alt || "";
-      // Force image to load at full size
       img.style.height = "200px";
       img.style.width = "auto";
     }
@@ -498,8 +485,8 @@ class ContactComponent extends HTMLElement {
           color: var(--teal-color);
           font-size: var(--font-size-xl);
           font-weight: var(--font-weight-semibold);
-          margin-bottom: var(--spacing-md);
           letter-spacing: 0.5px;
+          margin-bottom: var(--spacing-md);
         }
         .contact-links {
           display: flex;
@@ -507,25 +494,25 @@ class ContactComponent extends HTMLElement {
           gap: 1.5rem;
         }
         .contact-link {
-          display: flex;
           align-items: center;
-          gap: 1rem;
-          color: var(--primary-color);
-          text-decoration: none;
-          padding: 1rem;
-          border: 2px solid transparent;
-          border-radius: 8px;
-          transition: all 0.3s ease;
-          position: relative;
           background: white;
+          border-radius: 8px;
+          border: 2px solid transparent;
+          color: var(--primary-color);
+          display: flex;
+          gap: 1rem;
+          padding: 1rem;
+          position: relative;
+          text-decoration: none;
+          transition: all 0.3s ease;
         }
         .contact-link::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          border-radius: 8px;
-          padding: 2px;
           background: linear-gradient(90deg, var(--teal-color) 0%, var(--primary-color) 100%);
+          border-radius: 8px;
+          content: '';
+          inset: 0;
+          padding: 2px;
+          position: absolute;
           -webkit-mask: 
             linear-gradient(#fff 0 0) content-box, 
             linear-gradient(#fff 0 0);
@@ -540,10 +527,10 @@ class ContactComponent extends HTMLElement {
           fill: var(--light-text);
         }
         .contact-link svg {
-          width: 24px;
-          height: 24px;
           fill: var(--primary-color);
+          height: 24px;
           transition: fill 0.3s ease;
+          width: 24px;
         }
       </style>
       <div class="contact-container">
