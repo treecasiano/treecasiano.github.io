@@ -243,13 +243,13 @@ class AboutComponent extends HTMLElement {
         }
         .section-header h1 {
           color: var(--teal-color);
-          font-size: 2rem;
-          font-weight: 600;
-          margin-bottom: 1rem;
+          font-size: var(--font-size-xl);
+          font-weight: var(--font-weight-semibold);
+          margin-bottom: var(--spacing-md);
         }
         p {
           color: var(--text-color);
-          font-size: 1.1rem;
+          font-size: var(--font-size-body-lg);
           line-height: 1.6;
           margin-bottom: 1.5rem;
         }
@@ -286,9 +286,9 @@ class ProjectsComponent extends HTMLElement {
         }
         .section-header h2 {
           color: var(--teal-color);
-          font-size: 2rem;
-          font-weight: 600;
-          margin-bottom: 1rem;
+          font-size: var(--font-size-xl);
+          font-weight: var(--font-weight-semibold);
+          margin-bottom: var(--spacing-md);
         }
         .projects-grid {
           display: flex;
@@ -490,9 +490,10 @@ class ContactComponent extends HTMLElement {
         }
         .section-header h2 {
           color: var(--teal-color);
-          font-size: 2rem;
-          font-weight: 600;
-          margin-bottom: 1rem;
+          font-size: var(--font-size-xl);
+          font-weight: var(--font-weight-semibold);
+          margin-bottom: var(--spacing-md);
+          letter-spacing: 0.5px;
         }
         .contact-links {
           display: flex;
