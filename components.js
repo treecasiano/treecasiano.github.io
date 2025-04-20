@@ -103,10 +103,6 @@ class HeaderComponent extends HTMLElement {
             .forEach((a) => a.classList.remove("active"));
           // Add active class to current link
           link.classList.add("active");
-          // Update URL hash without scrolling
-          if (window.location.hash !== `#${id}`) {
-            history.replaceState(null, null, `#${id}`);
-          }
         }
       });
     }, options);
@@ -130,7 +126,8 @@ class HeaderComponent extends HTMLElement {
         // Add active class to clicked link
         link.classList.add("active");
 
-        // Smooth scroll to section
+        // Update URL hash and scroll to section
+        history.pushState(null, null, `#${targetId}`);
         targetSection.scrollIntoView({ behavior: "smooth" });
       });
     });
@@ -147,14 +144,19 @@ class HeaderComponent extends HTMLElement {
               .querySelectorAll("a")
               .forEach((a) => a.classList.remove("active"));
             link.classList.add("active");
-            targetSection.scrollIntoView();
+            // Scroll to section immediately without animation
+            targetSection.scrollIntoView({ behavior: "instant" });
           }
         }
       }
     };
 
     // Handle initial hash and hash changes
-    handleInitialHash();
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", handleInitialHash);
+    } else {
+      handleInitialHash();
+    }
     window.addEventListener("hashchange", handleInitialHash);
   }
 }
