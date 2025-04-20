@@ -148,6 +148,18 @@ class HeaderComponent extends HTMLElement {
             targetSection.scrollIntoView({ behavior: "instant" });
           }
         }
+      } else if (!window.location.hash) {
+        // If no hash is present, redirect to #about
+        history.replaceState(null, null, "#about");
+        const aboutSection = document.getElementById("about");
+        const aboutLink = this.shadowRoot.querySelector('a[href="#about"]');
+        if (aboutSection && aboutLink) {
+          this.shadowRoot
+            .querySelectorAll("a")
+            .forEach((a) => a.classList.remove("active"));
+          aboutLink.classList.add("active");
+          aboutSection.scrollIntoView({ behavior: "instant" });
+        }
       }
     };
 
