@@ -258,8 +258,8 @@ class AboutComponent extends HTMLElement {
         <div class="section-header">
           <h1>Tree Casiano, GIS Developer</h1>
         </div>
-        <p>Greetings! I'm a full stack developer specializing in geospatial applications. I build accessible, intuitive web interfaces that make complex spatial data accessible and actionable.</p>
-        <p>My work focuses on interactive maps, spatial analysis tools, and custom GIS applications that tell compelling stories with data through thoughtful visualization and user experience.</p>
+        <p>Greetings! I'm a full stack developer specializing in interactive maps and data visualization. I build accessible, intuitive web interfaces that make complex spatial data meaningful and actionable.</p>
+        <p>I enjoy working across the stack - from crafting pixel-perfect UIs to optimizing database queries. I'm especially interested in web cartography, web accessibility, information visualization, and data literacy.</p>
         <scroll-arrow next-section="#projects"></scroll-arrow>
       </div>
     `;
