@@ -229,7 +229,7 @@ class AboutComponent extends HTMLElement {
           text-align: center;
         }
         .section-header {
-          margin-bottom: var(--spacing-lg);
+          margin-bottom: var(--spacing-xl);
         }
         .section-header h1 {
           color: var(--teal-color);
@@ -246,18 +246,15 @@ class AboutComponent extends HTMLElement {
           font-size: var(--font-size-body-lg);
           line-height: 1.6;
           margin-bottom: 1.5rem;
-        }
+        } 
       </style>
       <div class="section-header">
-        <h1>TREE CASIANO
-          <span>Web/GIS Developer</span>
-        </h1>
+        <h1>Hello, World! I'm Tree. I make maps and build apps.</h1>
       </div>
 
 
-      <p>Greetings! I'm a full stack developer specializing in interactive maps and data visualization. I build accessible, intuitive web interfaces that make complex spatial data meaningful and actionable.</p>
+      <p>I'm a full stack developer specializing in interactive maps and data visualization. I build accessible, intuitive web interfaces that make complex spatial data meaningful and actionable.</p>
       <p>I enjoy working across the stack - from crafting pixel-perfect UIs to optimizing database queries. I'm especially interested in web cartography, web accessibility, information visualization, and data literacy.</p>
-
       <scroll-arrow next-section="#projects"></scroll-arrow>
       </div>
     `;
