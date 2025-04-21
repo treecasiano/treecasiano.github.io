@@ -239,6 +239,7 @@ class AboutComponent extends HTMLElement {
         }
         .section-header h1 span {
           display: block;
+          font-size: 1.1rem;
         }
         p {
           color: var(--text-color);
@@ -247,14 +248,17 @@ class AboutComponent extends HTMLElement {
           margin-bottom: 1.5rem;
         }
       </style>
-      <div class="about-container">
-        <div class="section-header">
-          <h1>Tree Casiano <span>GIS Developer</span>
-          </h1>
-        </div>
-        <p>Greetings! I'm a full stack developer specializing in interactive maps and data visualization. I build accessible, intuitive web interfaces that make complex spatial data meaningful and actionable.</p>
-        <p>I enjoy working across the stack - from crafting pixel-perfect UIs to optimizing database queries. I'm especially interested in web cartography, web accessibility, information visualization, and data literacy.</p>
-        <scroll-arrow next-section="#projects"></scroll-arrow>
+      <div class="section-header">
+        <h1>TREE CASIANO
+          <span>Web/GIS Developer</span>
+        </h1>
+      </div>
+
+
+      <p>Greetings! I'm a full stack developer specializing in interactive maps and data visualization. I build accessible, intuitive web interfaces that make complex spatial data meaningful and actionable.</p>
+      <p>I enjoy working across the stack - from crafting pixel-perfect UIs to optimizing database queries. I'm especially interested in web cartography, web accessibility, information visualization, and data literacy.</p>
+
+      <scroll-arrow next-section="#projects"></scroll-arrow>
       </div>
     `;
   }
