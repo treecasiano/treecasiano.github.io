@@ -5,21 +5,25 @@ class HeaderComponent extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>
         :host {
-          background: linear-gradient(90deg, var(--teal-color) 0%, var(--primary-color) 100%);
+          background: var(--gradient-primary);
+          padding: var(--spacing-xs);
           position: fixed;
+          width: 100%;
           z-index: 1000;
         }
         .header-content {
-          display: flex;
-          justify-content: space-between;
           align-items: center;
-          max-width: 1600px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
           margin: 0 auto;
+          max-width: 1600px;
+          padding-bottom: var(--spacing-sm);
         }
         .name {
           color: var(--light-text);
-          font-size: 1.5rem;
-          font-weight: 600;
+          font-size: var(--font-size-xl);
+          font-weight: var(--font-weight-semibold);
           text-decoration: none;
           transition: color 0.3s ease;
         }
@@ -33,13 +37,12 @@ class HeaderComponent extends HTMLElement {
           margin-bottom: -0.45rem;
         }
         a {
-          color: var(--light-text);
-          text-decoration: none;
-          padding: 0.5rem 1rem;
           border-radius: 4px;
-          transition: all 0.3s ease;
+          color: var(--light-text);
+          padding: 0.5rem 1rem;
           position: relative;
-          font-weight: 500;
+          text-decoration: none;
+          transition: all 0.3s ease;
         }
         a::after {
           content: '';
@@ -220,10 +223,13 @@ class AboutComponent extends HTMLElement {
       <style>
         :host {
           display: block;
+          max-width: 800px;
+          margin: 0 auto;
           padding: 4rem 2rem;
+          text-align: center;
         }
         .section-header {
-          margin-bottom: 3rem;
+          margin-bottom: var(--spacing-xl);
         }
         .section-header h1 {
           color: var(--teal-color);
@@ -231,20 +237,25 @@ class AboutComponent extends HTMLElement {
           font-weight: var(--font-weight-semibold);
           margin-bottom: var(--spacing-md);
         }
+        .section-header h1 span {
+          display: block;
+          font-size: 1.1rem;
+        }
         p {
           color: var(--text-color);
           font-size: var(--font-size-body-lg);
           line-height: 1.6;
           margin-bottom: 1.5rem;
-        }
+        } 
       </style>
-      <div class="about-container">
-        <div class="section-header">
-          <h1>Tree Casiano, GIS Developer</h1>
-        </div>
-        <p>Greetings! I'm a full stack developer specializing in interactive maps and data visualization. I build accessible, intuitive web interfaces that make complex spatial data meaningful and actionable.</p>
-        <p>I enjoy working across the stack - from crafting pixel-perfect UIs to optimizing database queries. I'm especially interested in web cartography, web accessibility, information visualization, and data literacy.</p>
-        <scroll-arrow next-section="#projects"></scroll-arrow>
+      <div class="section-header">
+        <h1>Hello, World! I'm Tree. I make maps and build apps.</h1>
+      </div>
+
+
+      <p>I'm a full stack developer specializing in interactive maps and data visualization. I build accessible, intuitive web interfaces that make complex spatial data meaningful and actionable.</p>
+      <p>I enjoy working across the stack - from crafting pixel-perfect UIs to optimizing database queries. I'm especially interested in web cartography, web accessibility, information visualization, and data literacy.</p>
+      <scroll-arrow next-section="#projects"></scroll-arrow>
       </div>
     `;
   }
@@ -258,46 +269,37 @@ class ProjectsComponent extends HTMLElement {
       <style>
         :host {
           display: block;
-          padding: 4rem 2rem;
+          margin: 0 auto;
+          padding: var(--spacing-lg);
         }
         .section-header {
-          margin-bottom: 3rem;
+          padding: 3rem 0 1rem 0;
         }
         .section-header h2 {
           color: var(--teal-color);
           font-size: var(--font-size-xl);
           font-weight: var(--font-weight-semibold);
-          margin-bottom: var(--spacing-md);
         }
         .projects-container {
           display: flex;
           flex-direction: column;
           gap: 2rem;
-          max-width: 900px;
           margin: 0 auto;
-        }
-        .project-card {
-          background: white;
-          border-radius: 12px;
-          padding: 1.5rem;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease;
-        }
-        .project-card:hover {
-          transform: translateY(-5px);
-        }
+          max-width: 1000px;
+        }      
+      }
       </style>
       <div class="section-header">
         <h2>Featured Projects</h2>
       </div>
       <div class="projects-container">
-        <project-card repo-url="https://github.com/treecasiano/pdx-food-map">
+        <project-card repo-url="https://github.com/treecasiano/pdx-food-map" executive-summary-url="img/pdx_food_map_executive_summary.pdf">
           <span slot="title">PDX Food Map</span>
           <span slot="description">Interactive web map displaying food access indicators and sources of healthy food in the Portland Metro area, using data from the USDA Economic Research Service Food Access Research Atlas.</span>
           <span slot="tools">Leaflet, Vue.js, Vuetify, PostgreSQL, Node, Express</span>
           <img src="img/pdxmetrofoodmap.png" alt="PDX Food Map">
         </project-card>
-        <project-card repo-url="https://github.com/treecasiano/nitrate-cancer-analysis" project-url="https://treecasiano.github.io/nitrate-cancer-analysis/#/" executive-summary-url="img/pdx_food_map_executive_summary.pdf">
+        <project-card repo-url="https://github.com/treecasiano/nitrate-cancer-analysis" project-url="https://treecasiano.github.io/nitrate-cancer-analysis/#/">
           <span slot="title">Nitrate Levels and Cancer Incidence Analysis</span>
           <span slot="description">Interactive map exploring the relationship between nitrate levels and cancer analysis in Wisconsin census tracts.</span>
           <span slot="tools">Vue, Vuetify, Leaflet, Turf.js</span>
@@ -321,40 +323,42 @@ class ProjectCard extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>
         :host {
-          display: block;
           background-color: white;
           border-radius: 12px;
-          overflow: hidden;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+          display: block;
+          overflow: hidden;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         :host(:hover) {
-          transform: translateY(-4px);
           box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+          transform: translateY(-4px);
         }
         .card-content {
+          align-items: center;
           display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
           gap: 1.5rem;
           padding: 1.5rem;
-          align-items: center;
         }
         .text-content {
           flex: 1;
         }
         img {
-          width: auto;
-          height: 200px;
-          object-fit: contain;
-          object-position: center;
           border-radius: 8px;
-          display: block;
           border: 2px solid rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+          display: block;
+          max-height: 200px;
+          object-fit: contain;
+          object-position: center;
+          width: auto;
         }
         h3 {
           color: var(--teal-color);
           font-size: 1.25rem;
-          font-weight: 600;
+          font-weight: var(--font-weight-semibold);
           margin: 0 0 1rem 0;
         }
         p {
@@ -365,9 +369,9 @@ class ProjectCard extends HTMLElement {
         }
         .tools {
           background-color: #F8F8F8;
-          padding: 1rem;
           border-radius: 8px;
           margin-top: 1rem;
+          padding: 1rem;
         }
         .tools h4 {
           color: var(--teal-color);
@@ -379,28 +383,28 @@ class ProjectCard extends HTMLElement {
         }
         .tools p {
           color: var(--text-color);
-          font-size: 0.85rem;
+          font-size: var(--font-size-sm);
           margin: 0 0 0.5rem 0;
           opacity: 0.8;
         }
         .repo-link, .project-link, .executive-summary-link {
-          color: var(--teal-color);
-          text-decoration: none;
-          font-size: 0.85rem;
-          display: inline-flex;
           align-items: center;
+          color: var(--teal-color);
+          display: inline-flex;
+          font-size: var(--font-size-sm);
           gap: 0.25rem;
-          transition: color 0.3s ease;
           margin-right: 1rem;
+          text-decoration: none;
+          transition: color 0.3s ease;
         }
         .repo-link:hover, .project-link:hover, .executive-summary-link:hover {
           color: var(--primary-color);
           text-decoration: underline;
         }
         .repo-link svg, .project-link svg, .executive-summary-link svg {
-          width: 14px;
-          height: 14px;
           fill: currentColor;
+          height: 14px;
+          width: 14px;
         }
         .project-links {
           display: flex;
@@ -413,7 +417,7 @@ class ProjectCard extends HTMLElement {
           <h3><slot name="title"></slot></h3>
           <p><slot name="description"></slot></p>
           <div class="tools">
-            <h4>Tools</h4>
+            <h4>Tools & Technology</h4>
             <p><slot name="tools"></slot></p>
             <div class="project-links">
               <a href="#" class="repo-link" target="_blank" rel="noopener noreferrer">
@@ -488,15 +492,16 @@ class ContactComponent extends HTMLElement {
       <style>
         :host {
           display: block;
-          padding: 4rem 2rem;
-          background-color: var(--background-color);
-        }
-        .contact-container {
-          max-width: 800px;
           margin: 0 auto;
+          max-width: 800px;
+          padding: 4rem 2rem;
         }
         .section-header {
-          margin-bottom: 3rem;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-bottom: var(--spacing-lg);
         }
         .section-header h2 {
           color: var(--teal-color);
